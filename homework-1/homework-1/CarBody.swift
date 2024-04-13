@@ -7,27 +7,13 @@
 
 import Foundation
 
-enum CarBody {
-    case cityCar
-    case hatchback
-    case suv
-    case convertible
-    case peopleCarrier
+enum CarBody: Int, CaseIterable {
+    case cityCar = 1
+    case hatchback = 2
+    case suv = 3
+    case convertible = 4
+    case peopleCarrier = 5
     
-    var typeNumber: Int {
-        switch self {
-        case .cityCar:
-            return 1
-        case .hatchback:
-            return 2
-        case .suv:
-            return 3
-        case .convertible:
-            return 4
-        case .peopleCarrier:
-            return 5
-        }
-    }
     var title: String {
         switch self {
         case .cityCar:

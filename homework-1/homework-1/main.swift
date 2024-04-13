@@ -6,10 +6,9 @@
 //
 
 import Foundation
+
 var cars: [Car] = []
-let menuMessage = "1. Add new Car \n2. Print all Cars \n3. Print Cars with specific body"
-let carBodyTypeMessage = "1. City Car\n2. Hatchback \n3. SUV\n4. Convertible \n5. People Carrier"
-print(menuMessage)
+printMenuMessage()
 while let input = readLine() {
     guard input != "quit" else {
         break
@@ -17,21 +16,21 @@ while let input = readLine() {
     switch Int(input) ?? 0 {
     case 1:
         addNewCar()
-        print(menuMessage)
+        printMenuMessage()
     case 2:
         printCars(cars)
-        print(menuMessage)
+        printMenuMessage()
     case 3:
         printCarsByFilter()
-        print(menuMessage)
+        printMenuMessage()
     default:
-        print("Wrong input, try again")
+        print(ActionMessages.wrongInput.rawValue)
     }
 }
 
 func printCars(_ cars: [Car]) {
     if cars.isEmpty {
-        print("No cars yet!\n")
+        print(ActionMessages.noCarsYet.rawValue)
         return
     }
     cars.forEach{ car in
@@ -55,68 +54,50 @@ func printCars(_ cars: [Car]) {
     }
 }
 
-func printCarsByFilter() {
-    print("Select the body")
-    print(carBodyTypeMessage)
-    let bodyNumber = readLine()
-    let body: CarBody?
-    switch Int(bodyNumber ?? "") ?? 0 {
-    case 1:
-        body = CarBody.cityCar
-    case 2:
-        body = CarBody.hatchback
-    case 3:
-        body = CarBody.suv
-    case 4:
-        body = CarBody.convertible
-    case 5:
-        body = CarBody.peopleCarrier
-    default:
-        body = nil
+func printCarsBodyType() {
+    CarBody.allCases.forEach {
+        print("\($0.rawValue)." + " " + "\($0.title)")
     }
-    guard
-        let body = body
+}
+
+func printMenuMessage() {
+    StartAction.allCases.forEach {
+        print("\($0.rawValue)")
+    }
+}
+
+func printCarsByFilter() {
+    print(ActionMessages.selectTheBody.rawValue)
+    printCarsBodyType()
+    guard let bodyNumber = Int(readLine() ?? "0")
     else {
-        print("Invalid input, try again")
+        print(ActionMessages.wrongInput.rawValue)
         return
     }
+    let body = CarBody(rawValue: bodyNumber)
     let filteredCars = cars.filter({$0.body == body})
     printCars(filteredCars)
 }
 
 func addNewCar() {
-    print("Enter manufacturer:")
+    print(ActionMessages.enterManufacturer.rawValue)
     let manufacturer = readLine()
-    print("Enter model:")
+    print(ActionMessages.enterModel.rawValue)
     let model = readLine()
-    print("Select the body by entering the code")
-    print(carBodyTypeMessage)
-    let bodyNumber = readLine()
-    print("Enter year of issue:")
+    print(ActionMessages.enterBody.rawValue)
+    printCarsBodyType()
+    let bodyNumber = Int(readLine() ?? "") ?? 0
+    let body = CarBody(rawValue: bodyNumber)
+    print(ActionMessages.enterYearOfIssue.rawValue)
     let yearOfIssue = readLine()
-    print("Enter car number:")
+    print(ActionMessages.enterCarNumber.rawValue)
     let carNumber = readLine()
-    let body: CarBody?
-    switch Int(bodyNumber ?? "") ?? 0 {
-    case 1:
-        body = CarBody.cityCar
-    case 2:
-        body = CarBody.hatchback
-    case 3:
-        body = CarBody.suv
-    case 4:
-        body = CarBody.convertible
-    case 5:
-        body = CarBody.peopleCarrier
-    default:
-        body = nil
-    }
     guard
         let manufacturer = manufacturer,
         let model = model,
         let body = body
     else {
-        print("Invalid input, try again")
+        print(ActionMessages.wrongInput.rawValue)
         return
     }
     let newCar = Car(
@@ -127,6 +108,5 @@ func addNewCar() {
         carNumber: carNumber
     )
     cars.append(newCar)
-    print("Car added!\n")
-    
+    print(ActionMessages.carAdded.rawValue)
 }

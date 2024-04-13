@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		91013CCB2BCA8E0400105D5E /* StartAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91013CCA2BCA8E0400105D5E /* StartAction.swift */; };
+		91013CCD2BCA914100105D5E /* ActionMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91013CCC2BCA914100105D5E /* ActionMessages.swift */; };
 		91586C352BC6C625002D1E2E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91586C342BC6C625002D1E2E /* main.swift */; };
 		91586C3C2BC6C86E002D1E2E /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91586C3B2BC6C86E002D1E2E /* Car.swift */; };
 		91586C3E2BC6C883002D1E2E /* CarBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91586C3D2BC6C883002D1E2E /* CarBody.swift */; };
@@ -25,6 +27,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		91013CCA2BCA8E0400105D5E /* StartAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartAction.swift; sourceTree = "<group>"; };
+		91013CCC2BCA914100105D5E /* ActionMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionMessages.swift; sourceTree = "<group>"; };
 		91586C312BC6C625002D1E2E /* homework-1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "homework-1"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91586C342BC6C625002D1E2E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		91586C3B2BC6C86E002D1E2E /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
@@ -64,6 +68,8 @@
 				91586C342BC6C625002D1E2E /* main.swift */,
 				91586C3B2BC6C86E002D1E2E /* Car.swift */,
 				91586C3D2BC6C883002D1E2E /* CarBody.swift */,
+				91013CCA2BCA8E0400105D5E /* StartAction.swift */,
+				91013CCC2BCA914100105D5E /* ActionMessages.swift */,
 			);
 			path = "homework-1";
 			sourceTree = "<group>";
@@ -127,7 +133,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				91586C3C2BC6C86E002D1E2E /* Car.swift in Sources */,
+				91013CCB2BCA8E0400105D5E /* StartAction.swift in Sources */,
 				91586C352BC6C625002D1E2E /* main.swift in Sources */,
+				91013CCD2BCA914100105D5E /* ActionMessages.swift in Sources */,
 				91586C3E2BC6C883002D1E2E /* CarBody.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

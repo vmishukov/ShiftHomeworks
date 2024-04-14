@@ -6,7 +6,7 @@
 //
 
 import Foundation
-enum ActionMessages: String, CaseIterable {
+enum ActionMessages: String {
     case wrongInput = "Wrong input, please try again"
     case noCarsYet = "No cars yet!"
     case selectTheBody = "Select the body"

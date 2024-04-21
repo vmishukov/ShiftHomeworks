@@ -18,35 +18,11 @@ for value in 1...totalThreadIteration{
     }
 }
 
-for _ in 1...totalThreadIteration{
-    workerQueue.async {
-        print(testArr.count())
-    }
-}
-
-for value in 1...totalThreadIteration-1{
-    workerQueue.async {
-        print(testArr.subscript(index: value) ?? "does not contained")
-    }
-}
 for value in 1...totalThreadIteration-50{
     workerQueue.async {
         testArr.remove(at: value)
     }
 }
-for value in 1...totalThreadIteration{
-    workerQueue.async {
-        testArr.append(value)
-    }
-}
+sleep(2)
+print(testArr.count())
 
-for _ in 1...totalThreadIteration{
-    workerQueue.async {
-        print(testArr.isEmpty())
-    }
-}
-for value in 1...totalThreadIteration{
-    workerQueue.async {
-        print(testArr.contains(value))
-    }
-}

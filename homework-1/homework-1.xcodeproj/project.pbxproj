@@ -33,7 +33,6 @@
 		91586C342BC6C625002D1E2E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		91586C3B2BC6C86E002D1E2E /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		91586C3D2BC6C883002D1E2E /* CarBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarBody.swift; sourceTree = "<group>"; };
-		91AC2F742BD26F4300D33A30 /* homework-2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "homework-2.xcodeproj"; path = "../homework-2/homework-2.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +49,6 @@
 		91586C282BC6C625002D1E2E = {
 			isa = PBXGroup;
 			children = (
-				91AC2F742BD26F4300D33A30 /* homework-2.xcodeproj */,
 				91586C332BC6C625002D1E2E /* homework-1 */,
 				91586C322BC6C625002D1E2E /* Products */,
 			);

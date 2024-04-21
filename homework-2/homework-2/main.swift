@@ -7,5 +7,25 @@
 
 import Foundation
 
-print("Hello, World!")
+let testArr = SafeArray<Int>(array: [])
+
+let workerQueue = DispatchQueue (label: "com.bestkora.con", attributes: .concurrent)
+
+
+workerQueue.async {
+    for elem in 1...1000 {
+        testArr.append(elem)
+    }
+  
+}
+workerQueue.async {
+    for elem in 1...1000 {
+        testArr.append(elem)
+    }
+  
+}
+
+sleep(5)
+print(testArr.count())
+
 

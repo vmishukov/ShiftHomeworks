@@ -9,23 +9,44 @@ import Foundation
 
 let testArr = SafeArray<Int>(array: [])
 
-let workerQueue = DispatchQueue (label: "com.bestkora.con", attributes: .concurrent)
+let workerQueue = DispatchQueue (label: "com.worker.queue", attributes: .concurrent)
+let totalThreadIteration = 100
 
-
-workerQueue.async {
-    for elem in 1...1000 {
-        testArr.append(elem)
+for value in 1...totalThreadIteration{
+    workerQueue.async {
+        testArr.append(value)
     }
-  
-}
-workerQueue.async {
-    for elem in 1...1000 {
-        testArr.append(elem)
-    }
-  
 }
 
-sleep(5)
-print(testArr.count())
+for _ in 1...totalThreadIteration{
+    workerQueue.async {
+        print(testArr.count())
+    }
+}
 
+for value in 1...totalThreadIteration-1{
+    workerQueue.async {
+        print(testArr.subscript(index: value) ?? "does not contained")
+    }
+}
+for value in 1...totalThreadIteration-50{
+    workerQueue.async {
+        testArr.remove(at: value)
+    }
+}
+for value in 1...totalThreadIteration{
+    workerQueue.async {
+        testArr.append(value)
+    }
+}
 
+for _ in 1...totalThreadIteration{
+    workerQueue.async {
+        print(testArr.isEmpty())
+    }
+}
+for value in 1...totalThreadIteration{
+    workerQueue.async {
+        print(testArr.contains(value))
+    }
+}

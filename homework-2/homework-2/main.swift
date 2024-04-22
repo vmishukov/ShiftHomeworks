@@ -24,5 +24,5 @@ for value in 1...totalThreadIteration-50{
     }
 }
 sleep(2)
-print(testArr.count())
+print(testArr.count)
 

@@ -11,15 +11,32 @@ enum errors: String {
 }
 
 final class SafeArray<T> {
+    // MARK: - private properties
     private var array: [T] = []
     private let accessQueue = DispatchQueue(label: "com.array.isolation", attributes: .concurrent)
+    // MARK: -  properties
+    var isEmpty: Bool {
+        var check = false
+        self.accessQueue.sync() {
+            check = self.array.isEmpty
+        }
+        return check
+    }
     
+    var count: Int {
+        var count = 0
+        self.accessQueue.sync() {
+            count = self.array.count
+        }
+        return count
+    }
+    // MARK: - init
     init(array: [T]) {
         self.accessQueue.async(flags: .barrier) {
             self.array = array
         }
     }
-    
+    // MARK: - public methods
     func append(_ item: T) {
         self.accessQueue.async(flags: .barrier) {
             self.array.append(item)
@@ -56,21 +73,5 @@ final class SafeArray<T> {
             })
         }
         return check
-    }
-    
-    func isEmpty() -> Bool {
-        var check = false
-        self.accessQueue.sync() {
-            check = self.array.isEmpty
-        }
-        return check
-    }
-    
-    func count() -> Int {
-        var count = 0
-        self.accessQueue.sync() {
-            count = self.array.count
-        }
-        return count
     }
 }

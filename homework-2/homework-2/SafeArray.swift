@@ -5,12 +5,29 @@
 //  Created by Vladislav Mishukov on 20.04.2024.
 //
 import Foundation
-
+// MARK: - error enum
 enum errors: String {
     case indexOutOfRange = "indexOutOfRange"
 }
+// MARK: - SafeArray Protocol
 
-final class SafeArray<T> {
+protocol SafeArrayProtocol {
+    associatedtype T
+    
+    var isEmpty: Bool { get }
+    var count: Int { get }
+    
+    func append(_ item: T)
+    func remove(at index: Int)
+    func `subscript`(index: Int) -> T?
+}
+
+protocol SafeArrayContainsProtocol {
+    associatedtype T: Equatable
+    func contains (_ element: T) -> Bool
+}
+
+final class SafeArray<T> : SafeArrayProtocol{
     // MARK: - private properties
     private var array: [T] = []
     private let accessQueue = DispatchQueue(label: "com.array.isolation", attributes: .concurrent)
@@ -64,8 +81,10 @@ final class SafeArray<T> {
         }
         return element
     }
-    
-    func contains (_ element: T) -> Bool where T: Equatable {
+}
+//MARK: - SafeArrayContainsProtocol
+extension SafeArray : SafeArrayContainsProtocol where T: Equatable {
+    func contains (_ element: T) -> Bool {
         var check = false
         self.accessQueue.sync() {
             check = array.contains(where: {

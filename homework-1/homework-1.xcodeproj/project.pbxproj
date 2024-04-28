@@ -14,6 +14,16 @@
 		91586C3E2BC6C883002D1E2E /* CarBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91586C3D2BC6C883002D1E2E /* CarBody.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		9145417E2BDE0F7A0032DC27 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 914541752BDE0F760032DC27 /* homework-3.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9145415E2BDE0D060032DC27;
+			remoteInfo = "homework-3";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		91586C2F2BC6C625002D1E2E /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -29,6 +39,7 @@
 /* Begin PBXFileReference section */
 		91013CCA2BCA8E0400105D5E /* StartAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartAction.swift; sourceTree = "<group>"; };
 		91013CCC2BCA914100105D5E /* ActionMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionMessages.swift; sourceTree = "<group>"; };
+		914541752BDE0F760032DC27 /* homework-3.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "homework-3.xcodeproj"; path = "../../homework-3/homework-3.xcodeproj"; sourceTree = "<group>"; };
 		91586C312BC6C625002D1E2E /* homework-1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "homework-1"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91586C342BC6C625002D1E2E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		91586C3B2BC6C86E002D1E2E /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
@@ -46,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9145417B2BDE0F7A0032DC27 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9145417F2BDE0F7A0032DC27 /* homework-3.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		91586C282BC6C625002D1E2E = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +84,7 @@
 		91586C332BC6C625002D1E2E /* homework-1 */ = {
 			isa = PBXGroup;
 			children = (
+				914541752BDE0F760032DC27 /* homework-3.xcodeproj */,
 				91586C342BC6C625002D1E2E /* main.swift */,
 				91586C3B2BC6C86E002D1E2E /* Car.swift */,
 				91586C3D2BC6C883002D1E2E /* CarBody.swift */,
@@ -120,12 +140,28 @@
 			mainGroup = 91586C282BC6C625002D1E2E;
 			productRefGroup = 91586C322BC6C625002D1E2E /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 9145417B2BDE0F7A0032DC27 /* Products */;
+					ProjectRef = 914541752BDE0F760032DC27 /* homework-3.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				91586C302BC6C625002D1E2E /* homework-1 */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		9145417F2BDE0F7A0032DC27 /* homework-3.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "homework-3.app";
+			remoteRef = 9145417E2BDE0F7A0032DC27 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
 		91586C2D2BC6C625002D1E2E /* Sources */ = {

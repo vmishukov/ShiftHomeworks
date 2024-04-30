@@ -14,7 +14,7 @@ final class TabBarViewController: UITabBarController {
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        self.viewControllers = [createAboutMeController(), createSkillsViewController()]
+        self.viewControllers = [createAboutMeController(), createSkillsViewController(),createHobbiesViewController()]
     }
     
     //MARK: - tab bar controllers
@@ -38,6 +38,14 @@ final class TabBarViewController: UITabBarController {
         return vc
     }
     
+    func createHobbiesViewController() -> UIViewController {
+        let vc = HobbiesViewController()
+        vc.tabBarItem = UITabBarItem(
+            title: "Хобби",
+            image: UIImage(systemName: "gamecontroller"),
+            tag: 3)
+        return vc
+    }
     //MARK: - UI
     private func setupUI() {
         view.backgroundColor = .systemBackground

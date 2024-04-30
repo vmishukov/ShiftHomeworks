@@ -17,6 +17,7 @@
 		91B285842BDFF5F1006C01CE /* SkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B285832BDFF5F1006C01CE /* SkillsViewController.swift */; };
 		91B285872BDFF807006C01CE /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B285862BDFF807006C01CE /* Fonts.swift */; };
 		91B285892BE0A9E4006C01CE /* LabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B285882BE0A9E4006C01CE /* LabelFactory.swift */; };
+		91B2858B2BE0BA00006C01CE /* HobbiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B2858A2BE0BA00006C01CE /* HobbiesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		91B285832BDFF5F1006C01CE /* SkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsViewController.swift; sourceTree = "<group>"; };
 		91B285862BDFF807006C01CE /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		91B285882BE0A9E4006C01CE /* LabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactory.swift; sourceTree = "<group>"; };
+		91B2858A2BE0BA00006C01CE /* HobbiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobbiesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				91B285852BDFF7A7006C01CE /* Design */,
 				914541612BDE0D060032DC27 /* AppDelegate.swift */,
 				914541632BDE0D060032DC27 /* SceneDelegate.swift */,
+				91B2858A2BE0BA00006C01CE /* HobbiesViewController.swift */,
 				91B285832BDFF5F1006C01CE /* SkillsViewController.swift */,
 				914541652BDE0D060032DC27 /* AboutMeViewController.swift */,
 				91B285812BDFEB89006C01CE /* TabBarViewController.swift */,
@@ -159,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91B285822BDFEB89006C01CE /* TabBarViewController.swift in Sources */,
+				91B2858B2BE0BA00006C01CE /* HobbiesViewController.swift in Sources */,
 				914541662BDE0D060032DC27 /* AboutMeViewController.swift in Sources */,
 				914541622BDE0D060032DC27 /* AppDelegate.swift in Sources */,
 				91B285892BE0A9E4006C01CE /* LabelFactory.swift in Sources */,

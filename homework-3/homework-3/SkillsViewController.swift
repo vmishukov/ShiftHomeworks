@@ -50,6 +50,7 @@ final class SkillsViewController: UIViewController {
     //MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .systemBackground
         setupUI()
     }
     

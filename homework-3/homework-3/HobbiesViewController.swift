@@ -20,21 +20,24 @@ final class HobbiesViewController: UIViewController {
     }()
     
     private lazy var hobbiesStackView: UIStackView = {
-        let sv = UIStackView(arrangedSubviews: [hobbiesTitleLabel])
+        let sv = UIStackView(arrangedSubviews: [hobbiesTitleLabel, hobbiesBody,hobbiesImageView,hobbiesImageView2,hobbiesImageView3])
         sv.translatesAutoresizingMaskIntoConstraints = false
         sv.spacing = 16
-        sv.axis = .horizontal
-        sv.distribution = .fillProportionally
+        sv.axis = .vertical
+        sv.distribution = .equalSpacing
         return sv
     }()
     
-    private lazy var hobbiesTitleLabel = LabelFactory.createTitleLabel(title: "Увлечения помимо разработки")
+    private lazy var hobbiesTitleLabel = CommonUiFactory.createTitleLabel(title: "Увлечения помимо разработки")
     
-    private lazy var hobbiesBody = LabelFactory.createBodyLabel(body:
+    private lazy var hobbiesBody = CommonUiFactory.createBodyLabel(body:
     """
     Стараюсь выходить из дома когда появляется такая возможность. погулять, куда нибудь сходить на концерт, покататься на велосипедах или на лыжах. Открыт ко многим активностям, главное чтобы это не было чем то очень экстремальным.
-    
+    Иногда что-то фотографирую красивенькое, вот примеры:
     """)
+    private lazy var hobbiesImageView: UIImageView = CommonUiFactory.createDemoImageView(source: .candles)
+    private lazy var hobbiesImageView2: UIImageView = CommonUiFactory.createDemoImageView(source: .river)
+    private lazy var hobbiesImageView3: UIImageView = CommonUiFactory.createDemoImageView(source: .tree)
     
     //MARK: - life cycle
     override func viewDidLoad() {
@@ -54,9 +57,7 @@ final class HobbiesViewController: UIViewController {
             hobbiesStackView.topAnchor.constraint(equalTo: hobbiesScrollView.topAnchor,constant: 16),
             hobbiesStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16),
             hobbiesStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            hobbiesStackView.bottomAnchor.constraint(equalTo: hobbiesScrollView.bottomAnchor)
-            
+            hobbiesStackView.bottomAnchor.constraint(equalTo: hobbiesScrollView.bottomAnchor),
         ])
     }
-
 }

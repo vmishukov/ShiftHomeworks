@@ -30,7 +30,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rizz" translatesAutoresizingMaskIntoConstraints="NO" id="cyc-yC-0jT" userLabel="titleImageView">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="snow_princess" translatesAutoresizingMaskIntoConstraints="NO" id="cyc-yC-0jT" userLabel="titleImageView">
                                 <rect key="frame" x="132" y="44" width="150" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="YPp-wE-bpr"/>
@@ -92,7 +92,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="rizz" width="960" height="1280"/>
+        <image name="snow_princess" width="1280" height="960"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

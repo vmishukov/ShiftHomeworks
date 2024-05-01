@@ -16,7 +16,7 @@
 		91B285822BDFEB89006C01CE /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B285812BDFEB89006C01CE /* TabBarViewController.swift */; };
 		91B285842BDFF5F1006C01CE /* SkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B285832BDFF5F1006C01CE /* SkillsViewController.swift */; };
 		91B285872BDFF807006C01CE /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B285862BDFF807006C01CE /* Fonts.swift */; };
-		91B285892BE0A9E4006C01CE /* LabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B285882BE0A9E4006C01CE /* LabelFactory.swift */; };
+		91B285892BE0A9E4006C01CE /* CommonUiFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B285882BE0A9E4006C01CE /* CommonUiFactory.swift */; };
 		91B2858B2BE0BA00006C01CE /* HobbiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B2858A2BE0BA00006C01CE /* HobbiesViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +32,7 @@
 		91B285812BDFEB89006C01CE /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		91B285832BDFF5F1006C01CE /* SkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsViewController.swift; sourceTree = "<group>"; };
 		91B285862BDFF807006C01CE /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
-		91B285882BE0A9E4006C01CE /* LabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactory.swift; sourceTree = "<group>"; };
+		91B285882BE0A9E4006C01CE /* CommonUiFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUiFactory.swift; sourceTree = "<group>"; };
 		91B2858A2BE0BA00006C01CE /* HobbiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobbiesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,7 +73,7 @@
 				91B285832BDFF5F1006C01CE /* SkillsViewController.swift */,
 				914541652BDE0D060032DC27 /* AboutMeViewController.swift */,
 				91B285812BDFEB89006C01CE /* TabBarViewController.swift */,
-				91B285882BE0A9E4006C01CE /* LabelFactory.swift */,
+				91B285882BE0A9E4006C01CE /* CommonUiFactory.swift */,
 				914541672BDE0D060032DC27 /* Main.storyboard */,
 				9145416A2BDE0D070032DC27 /* Assets.xcassets */,
 				9145416C2BDE0D070032DC27 /* LaunchScreen.storyboard */,
@@ -165,7 +165,7 @@
 				91B2858B2BE0BA00006C01CE /* HobbiesViewController.swift in Sources */,
 				914541662BDE0D060032DC27 /* AboutMeViewController.swift in Sources */,
 				914541622BDE0D060032DC27 /* AppDelegate.swift in Sources */,
-				91B285892BE0A9E4006C01CE /* LabelFactory.swift in Sources */,
+				91B285892BE0A9E4006C01CE /* CommonUiFactory.swift in Sources */,
 				91B285842BDFF5F1006C01CE /* SkillsViewController.swift in Sources */,
 				91B285872BDFF807006C01CE /* Fonts.swift in Sources */,
 				914541642BDE0D060032DC27 /* SceneDelegate.swift in Sources */,

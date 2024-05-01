@@ -13,3 +13,11 @@ class AboutMeViewController: UIViewController {
         super.viewDidLoad()
     }
 }
+
+
+//MARK: - Storyboarded
+extension AboutMeViewController: Storyboarded {
+    static func containingStoryboard() -> Storyboard {
+        return .Main
+    }
+}

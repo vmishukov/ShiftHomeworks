@@ -13,20 +13,25 @@ final class TabBarViewController: UITabBarController {
     //MARK: - lyfecycle
     override func awakeFromNib() {
         super.awakeFromNib()
-
         self.viewControllers = [createAboutMeController(), createSkillsViewController(),createHobbiesViewController()]
     }
     
+    
     //MARK: - tab bar controllers
     func createAboutMeController() -> UIViewController {
-        let storyboard = UIStoryboard(name: "Main", bundle: .main)
-        let vc = storyboard.instantiateViewController(withIdentifier: "AboutMeViewController")
-        vc.tabBarItem = UITabBarItem(
-            title: "Обо мне",
-            image: UIImage(systemName: "person.circle"),
-            tag: 1
-        )
-        return vc
+        do {
+            let vc = try AboutMeViewController.instantiate()
+            vc.tabBarItem = UITabBarItem(
+                title: "Обо мне",
+                image: UIImage(systemName: "person.circle"),
+                tag: 1
+            )
+            return vc
+        }
+        catch {
+            assertionFailure("\(error)")
+        }
+        return UIViewController()
     }
     
     func createSkillsViewController() -> UIViewController {
@@ -50,4 +55,5 @@ final class TabBarViewController: UITabBarController {
     private func setupUI() {
         view.backgroundColor = .systemBackground
     }
+    
 }

@@ -8,7 +8,16 @@
 import UIKit
 
 final class HobbiesViewController: UIViewController {
-    //MARK: UI
+    //MARK: - model
+    private let model = HobbiesModel(
+        body:    
+    """
+    Стараюсь выходить из дома, когда появляется такая возможность: погулять, сходить на концерт, покататься на велосипеде или на лыжах. Открыт ко многим активностям, главное, чтобы это не было что-то экстремальное.
+    Иногда фотографирую что-то красивенькое, вот примеры:
+    """,
+        images: [.candles, .river, .tree]
+    )
+    //MARK: - UI
     private lazy var hobbiesScrollView: UIScrollView = {
         let sv = UIScrollView()
         sv.translatesAutoresizingMaskIntoConstraints = false
@@ -20,7 +29,7 @@ final class HobbiesViewController: UIViewController {
     }()
     
     private lazy var hobbiesStackView: UIStackView = {
-        let sv = UIStackView(arrangedSubviews: [hobbiesTitleLabel, hobbiesBody,hobbiesImageView,hobbiesImageView2,hobbiesImageView3])
+        let sv = UIStackView(arrangedSubviews: [hobbiesTitleLabel, hobbiesBody])
         sv.translatesAutoresizingMaskIntoConstraints = false
         sv.spacing = 16
         sv.axis = .vertical
@@ -28,17 +37,9 @@ final class HobbiesViewController: UIViewController {
         return sv
     }()
     
-    private lazy var hobbiesTitleLabel = CommonUiFactory.createTitleLabel(title: "Увлечения помимо разработки")
+    private lazy var hobbiesTitleLabel = CommonUiFactory.createTitleLabel(title: HobbiesView.hobbiesTitle.rawValue)
     
-    private lazy var hobbiesBody = CommonUiFactory.createBodyLabel(body:
-    """
-    Стараюсь выходить из дома, когда появляется такая возможность: погулять, сходить на концерт, покататься на велосипеде или на лыжах. Открыт ко многим активностям, главное, чтобы это не было что-то экстремальное.
-    Иногда фотографирую что-то красивенькое, вот примеры:
-    """)
-    private lazy var hobbiesImageView: UIImageView = CommonUiFactory.createDemoImageView(source: .candles)
-    private lazy var hobbiesImageView2: UIImageView = CommonUiFactory.createDemoImageView(source: .river)
-    private lazy var hobbiesImageView3: UIImageView = CommonUiFactory.createDemoImageView(source: .tree)
-    
+    private lazy var hobbiesBody = CommonUiFactory.createBodyLabel(body: model.body)
     //MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +49,9 @@ final class HobbiesViewController: UIViewController {
     
     //MARK: - setup ui
     private func setupUI() {
+        model.images.forEach{
+            hobbiesStackView.addArrangedSubview(CommonUiFactory.createDemoImageView(source: $0))
+        }
         NSLayoutConstraint.activate([
             hobbiesScrollView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             hobbiesScrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
@@ -59,5 +63,6 @@ final class HobbiesViewController: UIViewController {
             hobbiesStackView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             hobbiesStackView.bottomAnchor.constraint(equalTo: hobbiesScrollView.bottomAnchor),
         ])
+        
     }
 }

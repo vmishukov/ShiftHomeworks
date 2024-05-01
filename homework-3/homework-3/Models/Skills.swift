@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+enum SkillsView: String {
+    case skillsTitle = "Как давно занимаетесь программированием? Какие языки изучали?"
+    case skillsExpecTitle = "Чего ждете от обучения?"
+}
+
+struct skillsModel {
+    let skillsBody: String
+    let expecBody: String
+}

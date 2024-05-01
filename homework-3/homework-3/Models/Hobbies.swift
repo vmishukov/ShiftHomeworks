@@ -6,3 +6,13 @@
 //
 
 import Foundation
+import UIKit
+
+enum HobbiesView: String {
+    case hobbiesTitle = "Увлечения помимо разработки"
+}
+
+struct HobbiesModel {
+    let body: String
+    let images: [UIImage]
+}

@@ -19,6 +19,9 @@
 		91B285892BE0A9E4006C01CE /* CommonUiFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B285882BE0A9E4006C01CE /* CommonUiFactory.swift */; };
 		91B2858B2BE0BA00006C01CE /* HobbiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B2858A2BE0BA00006C01CE /* HobbiesViewController.swift */; };
 		91EFCB2C2BE264FF00C503EC /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EFCB2B2BE264FF00C503EC /* Storyboard.swift */; };
+		91EFCB322BE26FE300C503EC /* AboutMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EFCB312BE26FE300C503EC /* AboutMe.swift */; };
+		91EFCB342BE26FF000C503EC /* Skills.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EFCB332BE26FF000C503EC /* Skills.swift */; };
+		91EFCB362BE26FFF00C503EC /* Hobbies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91EFCB352BE26FFF00C503EC /* Hobbies.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		91B285882BE0A9E4006C01CE /* CommonUiFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUiFactory.swift; sourceTree = "<group>"; };
 		91B2858A2BE0BA00006C01CE /* HobbiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HobbiesViewController.swift; sourceTree = "<group>"; };
 		91EFCB2B2BE264FF00C503EC /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
+		91EFCB312BE26FE300C503EC /* AboutMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMe.swift; sourceTree = "<group>"; };
+		91EFCB332BE26FF000C503EC /* Skills.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Skills.swift; sourceTree = "<group>"; };
+		91EFCB352BE26FFF00C503EC /* Hobbies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hobbies.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +74,8 @@
 		914541602BDE0D060032DC27 /* homework-3 */ = {
 			isa = PBXGroup;
 			children = (
+				91EFCB2F2BE26FB000C503EC /* Factory */,
+				91EFCB2E2BE26D4600C503EC /* Models */,
 				91EFCB2D2BE26BB400C503EC /* StoryboardViewControllers */,
 				91B285852BDFF7A7006C01CE /* Design */,
 				914541612BDE0D060032DC27 /* AppDelegate.swift */,
@@ -76,7 +84,6 @@
 				91B285832BDFF5F1006C01CE /* SkillsViewController.swift */,
 				914541652BDE0D060032DC27 /* AboutMeViewController.swift */,
 				91B285812BDFEB89006C01CE /* TabBarViewController.swift */,
-				91B285882BE0A9E4006C01CE /* CommonUiFactory.swift */,
 				914541672BDE0D060032DC27 /* Main.storyboard */,
 				9145416A2BDE0D070032DC27 /* Assets.xcassets */,
 				9145416C2BDE0D070032DC27 /* LaunchScreen.storyboard */,
@@ -99,6 +106,24 @@
 				91EFCB2B2BE264FF00C503EC /* Storyboard.swift */,
 			);
 			path = StoryboardViewControllers;
+			sourceTree = "<group>";
+		};
+		91EFCB2E2BE26D4600C503EC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				91EFCB312BE26FE300C503EC /* AboutMe.swift */,
+				91EFCB332BE26FF000C503EC /* Skills.swift */,
+				91EFCB352BE26FFF00C503EC /* Hobbies.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		91EFCB2F2BE26FB000C503EC /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				91B285882BE0A9E4006C01CE /* CommonUiFactory.swift */,
+			);
+			path = Factory;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,11 +198,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				91B285822BDFEB89006C01CE /* TabBarViewController.swift in Sources */,
+				91EFCB322BE26FE300C503EC /* AboutMe.swift in Sources */,
 				91B2858B2BE0BA00006C01CE /* HobbiesViewController.swift in Sources */,
 				914541662BDE0D060032DC27 /* AboutMeViewController.swift in Sources */,
 				914541622BDE0D060032DC27 /* AppDelegate.swift in Sources */,
 				91B285892BE0A9E4006C01CE /* CommonUiFactory.swift in Sources */,
 				91B285842BDFF5F1006C01CE /* SkillsViewController.swift in Sources */,
+				91EFCB342BE26FF000C503EC /* Skills.swift in Sources */,
+				91EFCB362BE26FFF00C503EC /* Hobbies.swift in Sources */,
 				91B285872BDFF807006C01CE /* Fonts.swift in Sources */,
 				91EFCB2C2BE264FF00C503EC /* Storyboard.swift in Sources */,
 				914541642BDE0D060032DC27 /* SceneDelegate.swift in Sources */,

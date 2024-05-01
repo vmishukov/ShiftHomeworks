@@ -8,25 +8,31 @@
 import UIKit
 
 final class SkillsViewController: UIViewController {
-    //MARK: - UI
-    private lazy var skillsLabelTitle: UILabel = CommonUiFactory.createTitleLabel(
-        title:  "Как давно занимаетесь программированием? Какие языки изучали? "
-    )
-    private lazy var skillsLabelBody: UILabel = CommonUiFactory.createBodyLabel(
-        body:
+    //MARK: - model
+    private let model = skillsModel(
+        skillsBody:
 """
 2016 год. Я начал изучать тот самый Паскаль. Этот язык тогда считался идеальным, чтобы начать изучать программирование, с этим я не согласен - лучше сразу начинать изучать реальные языки программирования.
 Затем я поступил в ВКИ НГУ. Там я полюбил язык C# и старался делать все на нём. После учебы, это был 2021 год, я пошёл работать аналитиком в банк. Там я мастерски освоил язык запросов SQL.
 Желание заниматься программированием не покидало меня, писать запросы на SQL это круто, но не то. Так, в 2023 году я начал изучать язык Swift.
 """
+        ,
+        expecBody: "Хочу прокачаться как разработчик. Послушать советов от опытных сотрудников ЦФТ. И, конечно же, найти тут свою работу")
+    
+    //MARK: - UI
+    private lazy var skillsLabelTitle: UILabel = CommonUiFactory.createTitleLabel(
+        title:  SkillsView.skillsTitle.rawValue
+    )
+    private lazy var skillsLabelBody: UILabel = CommonUiFactory.createBodyLabel(
+        body: model.skillsBody
     )
     
     private lazy var skillsLabelExpecTitle: UILabel = CommonUiFactory.createTitleLabel(
-        title:  "Чего ждете от обучения?"
+        title:  SkillsView.skillsExpecTitle.rawValue
     )
     
     private lazy var skillsLabelExpecBody: UILabel = CommonUiFactory.createBodyLabel(
-        body:  "Хочу прокачаться как разработчик. Послушать советов от опытных сотрудников ЦФТ. И, конечно же, найти тут свою работу"
+        body:  model.expecBody
     )
     
     private lazy var skillsStackView: UIStackView = {

@@ -6,3 +6,15 @@
 //
 
 import Foundation
+import UIKit
+
+enum AboutMeView: String {
+    case title = "Участник программы ШИФТ"
+}
+
+struct AboutMeModel {
+    let avatar: UIImage
+    let name: String
+    let education: String
+    let city: String
+}

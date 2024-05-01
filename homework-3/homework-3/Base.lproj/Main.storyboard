@@ -30,8 +30,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="snow_princess" translatesAutoresizingMaskIntoConstraints="NO" id="cyc-yC-0jT" userLabel="titleImageView">
-                                <rect key="frame" x="132" y="44" width="150" height="200"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paperplane" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cyc-yC-0jT" userLabel="titleImageView">
+                                <rect key="frame" x="132" y="45.000000000000014" width="150" height="199.33333333333337"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="YPp-wE-bpr"/>
                                     <constraint firstAttribute="width" constant="150" id="dUU-mg-2AB"/>
@@ -43,28 +43,28 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Участник программы ШИФТ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xwn-7a-awT" userLabel="titleLabel">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xwn-7a-awT" userLabel="titleLabel">
                                 <rect key="frame" x="5" y="254.00000000000003" width="399" height="32.333333333333343"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="K6T-PN-zKE">
-                                <rect key="frame" x="16" y="302.33333333333331" width="382" height="147.66666666666669"/>
+                                <rect key="frame" x="16" y="302.33333333333331" width="382" height="95"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="•Мишуков Владислав Иванович, 23 года" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8H7-kc-LZs" userLabel="nameLabel">
-                                        <rect key="frame" x="0.0" y="0.0" width="382" height="52.666666666666664"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="•---" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8H7-kc-LZs" userLabel="nameLabel">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="26.333333333333332"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="•Выпускник Яндекс Практикума. Окончил ВКИ НГУ" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jz9-Rk-mwf" userLabel="educationLabel">
-                                        <rect key="frame" x="0.0" y="60.666666666666686" width="382" height="52.666666666666657"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="•---" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jz9-Rk-mwf" userLabel="educationLabel">
+                                        <rect key="frame" x="0.0" y="34.333333333333371" width="382" height="26.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="•Живу рядом с Новосибирском" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHf-uC-EkO" userLabel="cityLabel">
-                                        <rect key="frame" x="0.0" y="121.33333333333336" width="382" height="26.333333333333329"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="•---" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHf-uC-EkO" userLabel="cityLabel">
+                                        <rect key="frame" x="0.0" y="68.666666666666686" width="382" height="26.333333333333329"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -85,6 +85,13 @@
                             <constraint firstItem="K6T-PN-zKE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-16" id="ysz-7D-3mm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cityLabelView" destination="uHf-uC-EkO" id="IHX-5H-LsR"/>
+                        <outlet property="educationLabelView" destination="Jz9-Rk-mwf" id="GUj-qA-Ht4"/>
+                        <outlet property="nameLabelView" destination="8H7-kc-LZs" id="Sh6-bc-3XB"/>
+                        <outlet property="titleImageView" destination="cyc-yC-0jT" id="mBW-Co-nGC"/>
+                        <outlet property="titleLabelView" destination="xwn-7a-awT" id="CD0-Pv-tzW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -92,7 +99,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="snow_princess" width="1280" height="960"/>
+        <image name="paperplane" catalog="system" width="128" height="119"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

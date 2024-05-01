@@ -32,8 +32,8 @@ final class HobbiesViewController: UIViewController {
     
     private lazy var hobbiesBody = CommonUiFactory.createBodyLabel(body:
     """
-    Стараюсь выходить из дома когда появляется такая возможность. погулять, куда нибудь сходить на концерт, покататься на велосипедах или на лыжах. Открыт ко многим активностям, главное чтобы это не было чем то очень экстремальным.
-    Иногда что-то фотографирую красивенькое, вот примеры:
+    Стараюсь выходить из дома, когда появляется такая возможность: погулять, сходить на концерт, покататься на велосипеде или на лыжах. Открыт ко многим активностям, главное, чтобы это не было что-то экстремальное.
+    Иногда фотографирую что-то красивенькое, вот примеры:
     """)
     private lazy var hobbiesImageView: UIImageView = CommonUiFactory.createDemoImageView(source: .candles)
     private lazy var hobbiesImageView2: UIImageView = CommonUiFactory.createDemoImageView(source: .river)

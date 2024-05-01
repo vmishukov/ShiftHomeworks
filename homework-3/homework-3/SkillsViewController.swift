@@ -26,7 +26,7 @@ final class SkillsViewController: UIViewController {
     )
     
     private lazy var skillsLabelExpecBody: UILabel = CommonUiFactory.createBodyLabel(
-        body:  "Хочу прокачаться как разработчик. Послушать советов от опытных сотрудников ЦФТ. И конечно же найти тут свою работу"
+        body:  "Хочу прокачаться как разработчик. Послушать советов от опытных сотрудников ЦФТ. И, конечно же, найти тут свою работу"
     )
     
     private lazy var skillsStackView: UIStackView = {

@@ -1,0 +1,59 @@
+//
+//  TabBarViewController.swift
+//  homework-3
+//
+//  Created by Vladislav Mishukov on 29.04.2024.
+//
+
+import Foundation
+import UIKit
+
+final class TabBarViewController: UITabBarController {
+    
+    //MARK: - lyfecycle
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        self.viewControllers = [createAboutMeController(), createSkillsViewController(),createHobbiesViewController()]
+    }
+    
+    
+    //MARK: - tab bar controllers
+    func createAboutMeController() -> UIViewController {
+        do {
+            let vc = try AboutMeViewController.instantiate()
+            vc.tabBarItem = UITabBarItem(
+                title: "Обо мне",
+                image: UIImage(systemName: "person.circle"),
+                tag: 1
+            )
+            return vc
+        }
+        catch {
+            assertionFailure("\(error)")
+        }
+        return UIViewController()
+    }
+    
+    func createSkillsViewController() -> UIViewController {
+        let vc = SkillsViewController()
+        vc.tabBarItem = UITabBarItem(
+            title: "Навыки разработчика",
+            image: UIImage(systemName: "laptopcomputer"),
+            tag: 2)
+        return vc
+    }
+    
+    func createHobbiesViewController() -> UIViewController {
+        let vc = HobbiesViewController()
+        vc.tabBarItem = UITabBarItem(
+            title: "Хобби",
+            image: UIImage(systemName: "gamecontroller"),
+            tag: 3)
+        return vc
+    }
+    //MARK: - UI
+    private func setupUI() {
+        view.backgroundColor = .systemBackground
+    }
+    
+}

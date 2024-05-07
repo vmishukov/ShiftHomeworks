@@ -9,7 +9,11 @@ import Foundation
 import UIKit
 
 final class FeedCollectionViewDelegate: NSObject, UICollectionViewDelegate {
-    
+    private enum cellSizeSetting: Int {
+        case minimumInteritemSpacingForSectionAt = 8
+        case cellsCountInRow = 2
+        case height = 150
+    }
 }
 
 //MARK: - UICollectionViewDelegateFlowLayout
@@ -17,7 +21,10 @@ extension FeedCollectionViewDelegate: UICollectionViewDelegateFlowLayout {
    
     // задает размеры для каждой ячейки
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: 50, height: 50)
+        let availableWidth = collectionView.frame.width - Double(cellSizeSetting.minimumInteritemSpacingForSectionAt.rawValue)
+        let cellWidth = availableWidth / CGFloat(cellSizeSetting.cellsCountInRow.rawValue)
+        let CellHeight = Double(cellSizeSetting.height.rawValue)
+        return CGSize(width: cellWidth, height: CellHeight)
     }
     // задает минимальнй отступ между строками коллекции
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
@@ -26,6 +33,6 @@ extension FeedCollectionViewDelegate: UICollectionViewDelegateFlowLayout {
     
     // минимальный отступ между ячейками
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 8
+        return CGFloat(cellSizeSetting.minimumInteritemSpacingForSectionAt.rawValue)
     }
 }

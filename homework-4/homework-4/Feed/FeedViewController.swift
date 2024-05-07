@@ -10,8 +10,6 @@ import UIKit
 class FeedViewController: UIViewController {
     //MARK: - UI
     private lazy var feedCollectionView: UICollectionView = {
-      //  let flowLayout = UICollectionViewFlowLayout()
-       // flowLayout.scrollDirection = .vertical
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -26,11 +24,8 @@ class FeedViewController: UIViewController {
     //MARK: - lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        feedCollectionView.dataSource = dataSource
-        feedCollectionView.delegate = delegate
-        
         setupUI()
+        setupNavbar()
     }
     
     //MARK: - setup ui
@@ -41,6 +36,12 @@ class FeedViewController: UIViewController {
             feedCollectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             feedCollectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
         ])
+        feedCollectionView.dataSource = dataSource
+        feedCollectionView.delegate = delegate
+    }
+    //MARK: - setup navbar
+    private func setupNavbar() {
+        navigationItem.title = "Пивная энциклопедия"
     }
 }
 

@@ -22,6 +22,7 @@ final class FeedCollectionViewCell: UICollectionViewCell {
     }()
     private lazy var feedLabel: UILabel = {
         let label = UILabel()
+        label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()

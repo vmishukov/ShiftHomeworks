@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 final class FeedCollectionViewDataSource: NSObject, UICollectionViewDataSource {
-    let mockData = FeedDetailedModel.createMockDate()
+    let mockData = FeedDetailedModel.createMockData()
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         mockData.count

@@ -24,7 +24,7 @@ final class FeedCollectionViewDelegate: NSObject, UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let data = FeedDetailedModel.createMockDate()[indexPath.row]
+        let data = FeedDetailedModel.createMockData()[indexPath.row]
         delegate?.present(with: data)
     }
 }

@@ -39,6 +39,7 @@ class FeedViewController: UIViewController {
         ])
         feedCollectionView.dataSource = collectionViewDataSource
         feedCollectionView.delegate = collectionViewDelegate
+        view.backgroundColor = .systemBackground
     }
     //MARK: - setup navbar
     private func setupNavbar() {
@@ -48,8 +49,8 @@ class FeedViewController: UIViewController {
 
 //MARK: - FeedViewControllerDelegate
 extension FeedViewController: FeedViewControllerDelegate {
-    func present() {
-        let vc = DetailedViewController()
+    func present(with data: FeedDetailedModel) {
+        let vc = DetailedViewController(data: data)
         navigationController?.pushViewController(vc, animated: true)
     }
 }

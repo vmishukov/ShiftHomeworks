@@ -15,7 +15,7 @@ final class FeedCollectionViewCell: UICollectionViewCell {
     private lazy var feedImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.contentMode = .scaleAspectFill
+        imageView.contentMode = .scaleAspectFit
         imageView.layer.cornerRadius = 10
         imageView.layer.masksToBounds = true
         return imageView
@@ -38,10 +38,15 @@ final class FeedCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
-        mockSetup()
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    //MARK: - public func
+    func setupData(with model: FeedCollectionModel) {
+        feedImageView.image = model.image
+        feedLabel.text = model.title
     }
     //MARK: - SETUP
     private func setupUI() {
@@ -52,12 +57,8 @@ final class FeedCollectionViewCell: UICollectionViewCell {
             feedStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
             feedImageView.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.75),
         ])
-        contentView.backgroundColor = .lightGray
+        contentView.backgroundColor = .systemFill
         contentView.layer.cornerRadius = 10
         contentView.layer.masksToBounds = true
-    }
-    private func mockSetup() {
-        feedImageView.image = .pilsner2
-        feedLabel.text = "Pilsner"
     }
 }

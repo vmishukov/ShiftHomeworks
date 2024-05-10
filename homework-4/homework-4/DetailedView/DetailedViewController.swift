@@ -25,6 +25,7 @@ final class DetailedViewController: UIViewController {
     private lazy var detailedDescriptionLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 0
         label.contentMode = .scaleAspectFill
         return label
     }()
@@ -51,12 +52,22 @@ final class DetailedViewController: UIViewController {
         button.addTarget(self, action: #selector(sourceButtonDidTap), for: .touchDown)
         return button
     }()
+    //MARK: - private
+    let deatailedModel: FeedDetailedModel
+    //MARK: - init
+    init(data: FeedDetailedModel) {
+        deatailedModel = data
+        super.init(nibName: nil, bundle: nil)
+    }
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     //MARK: - lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         setupNavbar()
-        mock()
+        setupData(with: deatailedModel)
     }
     //MARK: - Setup UI
     private func setupUI() {
@@ -68,20 +79,20 @@ final class DetailedViewController: UIViewController {
             
             detailedStackView.topAnchor.constraint(equalTo: detailedScrollView.topAnchor, constant: 10),
             detailedStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
-            detailedStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 10),
+            detailedStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
             detailedStackView.bottomAnchor.constraint(equalTo: detailedScrollView.bottomAnchor, constant: 10),
         ])
         view.backgroundColor = .systemBackground
     }
-    private func mock() {
-        detailedImageView.image = .pilsner
-        detailedTitleLabel.text = "test"
-        detailedDescriptionLabel.text = "test testovich"
+    private func setupData(with model: FeedDetailedModel) {
+        detailedImageView.image = model.collectionModel.image
+        detailedTitleLabel.text = model.collectionModel.title
+        detailedDescriptionLabel.text = model.description
     }
     //MARK: - OBJC
     @objc
     private func sourceButtonDidTap() {
-        let vc = SourceViewController()
+        let vc = SourceViewController(with: deatailedModel.sourceLink)
         self.present(vc, animated: true)
     }
     //MARK: - Setup navbar

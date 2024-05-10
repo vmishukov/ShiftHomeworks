@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol FeedViewControllerDelegate: AnyObject {
-    func present()
+    func present(with data: FeedDetailedModel)
 }
 
 final class FeedCollectionViewDelegate: NSObject, UICollectionViewDelegate {
@@ -20,11 +20,12 @@ final class FeedCollectionViewDelegate: NSObject, UICollectionViewDelegate {
         case minimumInteritemSpacingForSectionAt = 8
         case cellsCountInRow = 2
         case height = 150
+        case minimumLineSpacingForSectionAt = 10
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = DetailedViewController()
-        delegate?.present()
+        let data = FeedDetailedModel.createMockDate()[indexPath.row]
+        delegate?.present(with: data)
     }
 }
 
@@ -40,7 +41,7 @@ extension FeedCollectionViewDelegate: UICollectionViewDelegateFlowLayout {
     }
     // задает минимальнй отступ между строками коллекции
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 10
+        return CGFloat(cellSizeSetting.minimumLineSpacingForSectionAt.rawValue)
     }
     
     // минимальный отступ между ячейками

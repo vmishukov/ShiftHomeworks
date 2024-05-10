@@ -17,6 +17,7 @@
 		9190B8E72BE78BFA008EE186 /* FeedCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190B8E62BE78BFA008EE186 /* FeedCollectionViewDelegate.swift */; };
 		9190B8EA2BEA2C9D008EE186 /* DetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190B8E92BEA2C9D008EE186 /* DetailedViewController.swift */; };
 		9190B8ED2BEE013E008EE186 /* SourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190B8EC2BEE013E008EE186 /* SourceViewController.swift */; };
+		9190B8F02BEE1443008EE186 /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190B8EF2BEE1443008EE186 /* FeedModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		9190B8E62BE78BFA008EE186 /* FeedCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		9190B8E92BEA2C9D008EE186 /* DetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedViewController.swift; sourceTree = "<group>"; };
 		9190B8EC2BEE013E008EE186 /* SourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceViewController.swift; sourceTree = "<group>"; };
+		9190B8EF2BEE1443008EE186 /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		9190B8BE2BE7665C008EE186 /* homework-4 */ = {
 			isa = PBXGroup;
 			children = (
+				9190B8EE2BEE142D008EE186 /* Model */,
 				9190B8DE2BE77430008EE186 /* Feed */,
 				9190B8E82BEA2C61008EE186 /* DetailedView */,
 				9190B8EB2BEE0126008EE186 /* Source */,
@@ -109,6 +112,14 @@
 				9190B8EC2BEE013E008EE186 /* SourceViewController.swift */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		9190B8EE2BEE142D008EE186 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9190B8EF2BEE1443008EE186 /* FeedModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9190B8EA2BEA2C9D008EE186 /* DetailedViewController.swift in Sources */,
+				9190B8F02BEE1443008EE186 /* FeedModel.swift in Sources */,
 				9190B8C42BE7665C008EE186 /* FeedViewController.swift in Sources */,
 				9190B8E32BE77CD1008EE186 /* FeedCollectionViewCell.swift in Sources */,
 				9190B8E72BE78BFA008EE186 /* FeedCollectionViewDelegate.swift in Sources */,

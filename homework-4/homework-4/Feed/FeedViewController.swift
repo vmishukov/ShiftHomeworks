@@ -28,7 +28,10 @@ class FeedViewController: UIViewController {
         setupNavbar()
         collectionViewDelegate.delegate = self
     }
-    
+    override func viewWillTransition(to size: CGSize, with coordinator: any UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        feedCollectionView.collectionViewLayout.invalidateLayout()
+    }
     //MARK: - setup ui
     private func setupUI() {
         NSLayoutConstraint.activate([

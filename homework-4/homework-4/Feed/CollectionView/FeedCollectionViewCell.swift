@@ -18,12 +18,10 @@ final class FeedCollectionViewCell: UICollectionViewCell {
         imageView.contentMode = .scaleAspectFill
         imageView.layer.cornerRadius = 10
         imageView.layer.masksToBounds = true
-        imageView.image = .pilsner2
         return imageView
     }()
     private lazy var feedLabel: UILabel = {
         let label = UILabel()
-        label.text = "Pilsner"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -40,8 +38,8 @@ final class FeedCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
+        mockSetup()
     }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -57,5 +55,9 @@ final class FeedCollectionViewCell: UICollectionViewCell {
         contentView.backgroundColor = .lightGray
         contentView.layer.cornerRadius = 10
         contentView.layer.masksToBounds = true
+    }
+    private func mockSetup() {
+        feedImageView.image = .pilsner2
+        feedLabel.text = "Pilsner"
     }
 }

@@ -8,11 +8,23 @@
 import Foundation
 import UIKit
 
+protocol FeedViewControllerDelegate: AnyObject {
+    func present()
+}
+
 final class FeedCollectionViewDelegate: NSObject, UICollectionViewDelegate {
+    //MARK: - FeedViewControllerDelegate
+    weak var delegate: FeedViewControllerDelegate?
+    //MARK: - cellSizeSetting
     private enum cellSizeSetting: Int {
         case minimumInteritemSpacingForSectionAt = 8
         case cellsCountInRow = 2
         case height = 150
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = DetailedViewController()
+        delegate?.present()
     }
 }
 
@@ -21,7 +33,7 @@ extension FeedCollectionViewDelegate: UICollectionViewDelegateFlowLayout {
    
     // задает размеры для каждой ячейки
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let availableWidth = collectionView.frame.width - Double(cellSizeSetting.minimumInteritemSpacingForSectionAt.rawValue)
+        let availableWidth = collectionView.frame.width - Double(cellSizeSetting.minimumInteritemSpacingForSectionAt.rawValue * cellSizeSetting.cellsCountInRow.rawValue)
         let cellWidth = availableWidth / CGFloat(cellSizeSetting.cellsCountInRow.rawValue)
         let CellHeight = Double(cellSizeSetting.height.rawValue)
         return CGSize(width: cellWidth, height: CellHeight)

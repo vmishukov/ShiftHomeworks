@@ -18,14 +18,15 @@ class FeedViewController: UIViewController {
         return collectionView
     }()
     //MARK: - private variables
-    private let dataSource = FeedCollectionViewDataSource()
-    private let delegate = FeedCollectionViewDelegate()
+    private let collectionViewDataSource = FeedCollectionViewDataSource()
+    private let collectionViewDelegate = FeedCollectionViewDelegate()
     
     //MARK: - lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         setupNavbar()
+        collectionViewDelegate.delegate = self
     }
     
     //MARK: - setup ui
@@ -36,8 +37,8 @@ class FeedViewController: UIViewController {
             feedCollectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             feedCollectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
         ])
-        feedCollectionView.dataSource = dataSource
-        feedCollectionView.delegate = delegate
+        feedCollectionView.dataSource = collectionViewDataSource
+        feedCollectionView.delegate = collectionViewDelegate
     }
     //MARK: - setup navbar
     private func setupNavbar() {
@@ -45,3 +46,10 @@ class FeedViewController: UIViewController {
     }
 }
 
+//MARK: - FeedViewControllerDelegate
+extension FeedViewController: FeedViewControllerDelegate {
+    func present() {
+        let vc = DetailedViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+}

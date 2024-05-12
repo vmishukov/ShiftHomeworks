@@ -16,12 +16,10 @@ final class FeedCollectionViewDelegate: NSObject, UICollectionViewDelegate {
     //MARK: - FeedViewControllerDelegate
     weak var delegate: FeedViewControllerDelegate?
     //MARK: - cellSizeSetting
-    private enum cellSizeSetting: Int {
-        case minimumInteritemSpacingForSectionAt = 8
-        case cellsCountInRow = 2
-        case height = 150
-        case minimumLineSpacingForSectionAt = 10
-    }
+    static let minimumInteritemSpacingForSectionAt = 8
+    static let cellsCountInRow = 8
+    static let height = 8
+    static let minimumLineSpacingForSectionAt = 10
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let data = FeedDetailedModel.createMockData()[indexPath.row]
@@ -34,18 +32,18 @@ extension FeedCollectionViewDelegate: UICollectionViewDelegateFlowLayout {
    
     // задает размеры для каждой ячейки
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let availableWidth = collectionView.frame.width - Double(cellSizeSetting.minimumInteritemSpacingForSectionAt.rawValue * cellSizeSetting.cellsCountInRow.rawValue)
-        let cellWidth = availableWidth / CGFloat(cellSizeSetting.cellsCountInRow.rawValue)
-        let CellHeight = Double(cellSizeSetting.height.rawValue)
+        let availableWidth = collectionView.frame.width - Double(FeedCollectionViewDelegate.minimumInteritemSpacingForSectionAt * FeedCollectionViewDelegate.cellsCountInRow)
+        let cellWidth = availableWidth / CGFloat(FeedCollectionViewDelegate.cellsCountInRow)
+        let CellHeight = Double(FeedCollectionViewDelegate.height)
         return CGSize(width: cellWidth, height: CellHeight)
     }
     // задает минимальнй отступ между строками коллекции
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return CGFloat(cellSizeSetting.minimumLineSpacingForSectionAt.rawValue)
+        return CGFloat(FeedCollectionViewDelegate.minimumLineSpacingForSectionAt)
     }
     
     // минимальный отступ между ячейками
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return CGFloat(cellSizeSetting.minimumInteritemSpacingForSectionAt.rawValue)
+        return CGFloat(FeedCollectionViewDelegate.minimumInteritemSpacingForSectionAt)
     }
 }

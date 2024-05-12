@@ -18,15 +18,6 @@ final class SourceViewController: UIViewController {
         view.addSubview(label)
         return label
     }()
-    /*
-    private lazy var sourceDescriptionLabel: UILabel = {
-        let label = UILabel()
-        label.numberOfLines = 0
-        label.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(label)
-        return label
-    }()
-     */
     private lazy var sourceDescriptionTextView: UITextView = {
         let textView = UITextView()
         textView.isEditable = false

@@ -53,7 +53,7 @@ final class DetailedViewController: UIViewController {
         return button
     }()
     //MARK: - private
-    let deatailedModel: FeedDetailedModel
+    private let deatailedModel: FeedDetailedModel
     //MARK: - init
     init(data: FeedDetailedModel) {
         deatailedModel = data

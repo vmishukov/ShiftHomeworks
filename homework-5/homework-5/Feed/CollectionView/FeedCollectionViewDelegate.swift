@@ -18,8 +18,8 @@ final class FeedCollectionViewDelegate: NSObject, UICollectionViewDelegate {
     //MARK: - cellSizeSetting
     enum cellSizeSetting {
         static let minimumInteritemSpacingForSectionAt = 8
-        static let cellsCountInRow = 8
-        static let height = 8
+        static let cellsCountInRow = 2
+        static let height = 200
         static let minimumLineSpacingForSectionAt = 10
     }
     

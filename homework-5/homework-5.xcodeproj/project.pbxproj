@@ -18,6 +18,12 @@
 		9190B8EA2BEA2C9D008EE186 /* DetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190B8E92BEA2C9D008EE186 /* DetailedViewController.swift */; };
 		9190B8ED2BEE013E008EE186 /* SourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190B8EC2BEE013E008EE186 /* SourceViewController.swift */; };
 		9190B8F02BEE1443008EE186 /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190B8EF2BEE1443008EE186 /* FeedModel.swift */; };
+		9190B9462BFB1581008EE186 /* DetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190B9452BFB1581008EE186 /* DetailedView.swift */; };
+		9190B9482BFB6C8E008EE186 /* SourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190B9472BFB6C8E008EE186 /* SourceView.swift */; };
+		9190B94D2BFC64AF008EE186 /* DetailedViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190B94C2BFC64AF008EE186 /* DetailedViewPresenter.swift */; };
+		9190B94F2BFC6564008EE186 /* DetailedViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190B94E2BFC6564008EE186 /* DetailedViewAssembly.swift */; };
+		9190B9522BFC659F008EE186 /* DetailedViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190B9512BFC659F008EE186 /* DetailedViewRouter.swift */; };
+		9190B9552BFC9817008EE186 /* SourceViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190B9542BFC9817008EE186 /* SourceViewAssembly.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +40,12 @@
 		9190B8E92BEA2C9D008EE186 /* DetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedViewController.swift; sourceTree = "<group>"; };
 		9190B8EC2BEE013E008EE186 /* SourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceViewController.swift; sourceTree = "<group>"; };
 		9190B8EF2BEE1443008EE186 /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
+		9190B9452BFB1581008EE186 /* DetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedView.swift; sourceTree = "<group>"; };
+		9190B9472BFB6C8E008EE186 /* SourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceView.swift; sourceTree = "<group>"; };
+		9190B94C2BFC64AF008EE186 /* DetailedViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedViewPresenter.swift; sourceTree = "<group>"; };
+		9190B94E2BFC6564008EE186 /* DetailedViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedViewAssembly.swift; sourceTree = "<group>"; };
+		9190B9512BFC659F008EE186 /* DetailedViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedViewRouter.swift; sourceTree = "<group>"; };
+		9190B9542BFC9817008EE186 /* SourceViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceViewAssembly.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,10 +78,10 @@
 		9190B8BE2BE7665C008EE186 /* homework-5 */ = {
 			isa = PBXGroup;
 			children = (
-				9190B8EE2BEE142D008EE186 /* Model */,
 				9190B8DE2BE77430008EE186 /* Feed */,
-				9190B8E82BEA2C61008EE186 /* DetailedView */,
-				9190B8EB2BEE0126008EE186 /* Source */,
+				9190B8E82BEA2C61008EE186 /* DetailedViewMVP+R */,
+				9190B8EB2BEE0126008EE186 /* SourceMVC */,
+				9190B9532BFC6C11008EE186 /* Network */,
 				9190B8BF2BE7665C008EE186 /* AppDelegate.swift */,
 				9190B8C12BE7665C008EE186 /* SceneDelegate.swift */,
 				9190B8C82BE7665C008EE186 /* Assets.xcassets */,
@@ -98,28 +110,90 @@
 			path = CollectionView;
 			sourceTree = "<group>";
 		};
-		9190B8E82BEA2C61008EE186 /* DetailedView */ = {
+		9190B8E82BEA2C61008EE186 /* DetailedViewMVP+R */ = {
 			isa = PBXGroup;
 			children = (
-				9190B8E92BEA2C9D008EE186 /* DetailedViewController.swift */,
+				9190B94E2BFC6564008EE186 /* DetailedViewAssembly.swift */,
+				9190B9422BFB14A6008EE186 /* Model */,
+				9190B9432BFB14AE008EE186 /* View */,
+				9190B9442BFB14B3008EE186 /* Presenter */,
+				9190B9502BFC6581008EE186 /* Router */,
 			);
-			path = DetailedView;
+			path = "DetailedViewMVP+R";
 			sourceTree = "<group>";
 		};
-		9190B8EB2BEE0126008EE186 /* Source */ = {
+		9190B8EB2BEE0126008EE186 /* SourceMVC */ = {
 			isa = PBXGroup;
 			children = (
-				9190B8EC2BEE013E008EE186 /* SourceViewController.swift */,
+				9190B9542BFC9817008EE186 /* SourceViewAssembly.swift */,
+				9190B9492BFB7083008EE186 /* Model */,
+				9190B94A2BFB708E008EE186 /* View */,
+				9190B94B2BFB7096008EE186 /* Controller */,
 			);
-			path = Source;
+			path = SourceMVC;
 			sourceTree = "<group>";
 		};
-		9190B8EE2BEE142D008EE186 /* Model */ = {
+		9190B9422BFB14A6008EE186 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				9190B8EF2BEE1443008EE186 /* FeedModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		9190B9432BFB14AE008EE186 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9190B9452BFB1581008EE186 /* DetailedView.swift */,
+				9190B8E92BEA2C9D008EE186 /* DetailedViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9190B9442BFB14B3008EE186 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9190B94C2BFC64AF008EE186 /* DetailedViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		9190B9492BFB7083008EE186 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9190B94A2BFB708E008EE186 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9190B9472BFB6C8E008EE186 /* SourceView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9190B94B2BFB7096008EE186 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9190B8EC2BEE013E008EE186 /* SourceViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9190B9502BFC6581008EE186 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				9190B9512BFC659F008EE186 /* DetailedViewRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		9190B9532BFC6C11008EE186 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,10 +267,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				9190B8EA2BEA2C9D008EE186 /* DetailedViewController.swift in Sources */,
+				9190B9522BFC659F008EE186 /* DetailedViewRouter.swift in Sources */,
+				9190B94D2BFC64AF008EE186 /* DetailedViewPresenter.swift in Sources */,
 				9190B8F02BEE1443008EE186 /* FeedModel.swift in Sources */,
+				9190B9482BFB6C8E008EE186 /* SourceView.swift in Sources */,
+				9190B9462BFB1581008EE186 /* DetailedView.swift in Sources */,
 				9190B8C42BE7665C008EE186 /* FeedViewController.swift in Sources */,
 				9190B8E32BE77CD1008EE186 /* FeedCollectionViewCell.swift in Sources */,
+				9190B94F2BFC6564008EE186 /* DetailedViewAssembly.swift in Sources */,
 				9190B8E72BE78BFA008EE186 /* FeedCollectionViewDelegate.swift in Sources */,
+				9190B9552BFC9817008EE186 /* SourceViewAssembly.swift in Sources */,
 				9190B8E52BE77D58008EE186 /* FeedCollectionViewDataSource.swift in Sources */,
 				9190B8ED2BEE013E008EE186 /* SourceViewController.swift in Sources */,
 				9190B8C02BE7665C008EE186 /* AppDelegate.swift in Sources */,
@@ -346,7 +426,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FV5M76HD5M;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "homework-4/Info.plist";
+				INFOPLIST_FILE = "homework-5/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -356,7 +436,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "ru.ketamine.practicum.homework-4";
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.ketamine.practicum.homework-5";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -373,7 +453,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FV5M76HD5M;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "homework-4/Info.plist";
+				INFOPLIST_FILE = "homework-5/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -383,7 +463,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "ru.ketamine.practicum.homework-4";
+				PRODUCT_BUNDLE_IDENTIFIER = "ru.ketamine.practicum.homework-5";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

@@ -53,7 +53,9 @@ class FeedViewController: UIViewController {
 //MARK: - FeedViewControllerDelegate
 extension FeedViewController: FeedViewControllerDelegate {
     func present(with data: FeedDetailedModel) {
-        let vc = DetailedViewController(data: data)
+        
+        let dependencies = DetailedViewAssembly.Dependencies(navigationController: navigationController!, detailedModel: data)
+        let vc = DetailedViewAssembly.makeModule(with: dependencies)
         navigationController?.pushViewController(vc, animated: true)
     }
 }

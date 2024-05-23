@@ -28,12 +28,13 @@ final class DetailedViewPresenter {
 //MARK: - DetailedViewPresenterProtocol
 extension DetailedViewPresenter: DetailedViewPresenterProtocol {
     func showSourceViewScreen() {
-        router.showSourceScreen()
+        router.showSourceScreen(with: detailedModel.sourceLink)
     }
     
     func didLoad(ui: any DetailedViewProtocol) {
         self.ui = ui
     }
+    
     func setUpModel() {
         ui?.set(model: detailedModel)
     }

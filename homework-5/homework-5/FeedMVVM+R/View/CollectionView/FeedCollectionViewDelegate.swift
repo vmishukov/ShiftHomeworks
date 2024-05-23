@@ -14,7 +14,7 @@ protocol FeedViewControllerDelegate: AnyObject {
 
 final class FeedCollectionViewDelegate: NSObject, UICollectionViewDelegate {
     //MARK: - FeedViewControllerDelegate
-    weak var delegate: FeedViewControllerDelegate?
+    weak var viewControllerDelegate: FeedViewControllerDelegate?
     //MARK: - cellSizeSetting
     enum cellSizeSetting {
         static let minimumInteritemSpacingForSectionAt = 8
@@ -25,7 +25,7 @@ final class FeedCollectionViewDelegate: NSObject, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let data = FeedDetailedModel.createMockData()[indexPath.row]
-        delegate?.present(with: data)
+        viewControllerDelegate?.present(with: data)
     }
 }
 

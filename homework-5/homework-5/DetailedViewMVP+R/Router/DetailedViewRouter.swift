@@ -15,8 +15,8 @@ final class DetailedViewRouter {
         self.navigationController = navigationController
     }
     //MARK: - public func
-    func showSourceScreen() {
-        let dependencies = SourceViewAssembly.Dependencies(sourceLink: "")
-        navigationController.present(SourceViewAssembly.makeModule(with: dependencies), animated: true)
+    func showSourceScreen(with sourceLink: String) {
+        let parameters = SourceViewAssembly.Parameters(sourceLink: sourceLink)
+        navigationController.present(SourceViewAssembly.makeModule(with: parameters), animated: true)
     }
 }

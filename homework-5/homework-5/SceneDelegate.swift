@@ -14,7 +14,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController =  UINavigationController(rootViewController: FeedViewController())
+        let navigationController = UINavigationController()
+        let dependencies = FeedViewAssembly.Dependencies(navigationController: navigationController)
+        let feedViewController = FeedViewAssembly.makeModule(dependencies: dependencies)
+        navigationController.viewControllers = [feedViewController]
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
 

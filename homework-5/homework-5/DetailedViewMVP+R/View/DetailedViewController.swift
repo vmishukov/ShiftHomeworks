@@ -40,8 +40,7 @@ final class DetailedViewController: UIViewController {
     //MARK: - OBJC
     @objc
     private func sourceButtonDidTap() {
-        let vc = SourceViewController(with: "")
-        self.present(vc, animated: true)
+        presenter.showSourceViewScreen()
     }
     //MARK: - Setup navbar
     private func setupNavbar() {

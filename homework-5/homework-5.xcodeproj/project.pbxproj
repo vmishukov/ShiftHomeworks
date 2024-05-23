@@ -29,6 +29,9 @@
 		9190B95F2BFF0919008EE186 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190B95E2BFF0919008EE186 /* FeedViewModel.swift */; };
 		9190B9632BFF0970008EE186 /* FeedViewAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190B9622BFF0970008EE186 /* FeedViewAssembly.swift */; };
 		9190B9652BFF1607008EE186 /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190B9642BFF1607008EE186 /* FeedModel.swift */; };
+		9190B9672BFF1AC6008EE186 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190B9662BFF1AC6008EE186 /* Network.swift */; };
+		9190B96C2BFF3F36008EE186 /* FeedNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190B96B2BFF3F36008EE186 /* FeedNetworkModel.swift */; };
+		9190B96E2BFF48BD008EE186 /* FeedViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190B96D2BFF48BD008EE186 /* FeedViewData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +59,9 @@
 		9190B95E2BFF0919008EE186 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		9190B9622BFF0970008EE186 /* FeedViewAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewAssembly.swift; sourceTree = "<group>"; };
 		9190B9642BFF1607008EE186 /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
+		9190B9662BFF1AC6008EE186 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		9190B96B2BFF3F36008EE186 /* FeedNetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedNetworkModel.swift; sourceTree = "<group>"; };
+		9190B96D2BFF48BD008EE186 /* FeedViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,7 +155,6 @@
 		9190B9422BFB14A6008EE186 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9190B8EF2BEE1443008EE186 /* FeedDetailedModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -205,6 +210,9 @@
 		9190B9532BFC6C11008EE186 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				9190B8EF2BEE1443008EE186 /* FeedDetailedModel.swift */,
+				9190B9662BFF1AC6008EE186 /* Network.swift */,
+				9190B96B2BFF3F36008EE186 /* FeedNetworkModel.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -223,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				9190B9642BFF1607008EE186 /* FeedModel.swift */,
+				9190B96D2BFF48BD008EE186 /* FeedViewData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -316,6 +325,7 @@
 				9190B9632BFF0970008EE186 /* FeedViewAssembly.swift in Sources */,
 				9190B8EA2BEA2C9D008EE186 /* DetailedViewController.swift in Sources */,
 				9190B9522BFC659F008EE186 /* DetailedViewRouter.swift in Sources */,
+				9190B96C2BFF3F36008EE186 /* FeedNetworkModel.swift in Sources */,
 				9190B94D2BFC64AF008EE186 /* DetailedViewPresenter.swift in Sources */,
 				9190B8F02BEE1443008EE186 /* FeedDetailedModel.swift in Sources */,
 				9190B9482BFB6C8E008EE186 /* SourceView.swift in Sources */,
@@ -326,9 +336,11 @@
 				9190B9652BFF1607008EE186 /* FeedModel.swift in Sources */,
 				9190B9582BFDF1A5008EE186 /* FeedView.swift in Sources */,
 				9190B94F2BFC6564008EE186 /* DetailedViewAssembly.swift in Sources */,
+				9190B9672BFF1AC6008EE186 /* Network.swift in Sources */,
 				9190B8E72BE78BFA008EE186 /* FeedCollectionViewDelegate.swift in Sources */,
 				9190B9552BFC9817008EE186 /* SourceViewAssembly.swift in Sources */,
 				9190B8E52BE77D58008EE186 /* FeedCollectionViewDataSource.swift in Sources */,
+				9190B96E2BFF48BD008EE186 /* FeedViewData.swift in Sources */,
 				9190B95D2BFF067A008EE186 /* FeedViewRouter.swift in Sources */,
 				9190B8ED2BEE013E008EE186 /* SourceViewController.swift in Sources */,
 				9190B8C02BE7665C008EE186 /* AppDelegate.swift in Sources */,

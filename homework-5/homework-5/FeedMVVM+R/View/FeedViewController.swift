@@ -31,6 +31,8 @@ class FeedViewController: UIViewController {
         super.viewDidLoad()
         setupNavbar()
         contentView.collectionViewDelegate.viewControllerDelegate = self
+        bind()
+        viewModel.loadFeedData()
     }
     override func viewWillTransition(to size: CGSize, with coordinator: any UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
@@ -40,6 +42,13 @@ class FeedViewController: UIViewController {
     //MARK: - setup navbar
     private func setupNavbar() {
         navigationItem.title = "Пивная энциклопедия"
+    }
+    //MARK: - BIND
+    private func bind() {
+        viewModel.feedViewData = { [weak self] feedData in
+            self?.contentView.collectionViewDataSource.feedData = feedData
+            self?.contentView.feedCollectionView.reloadData()
+        }
     }
 }
 

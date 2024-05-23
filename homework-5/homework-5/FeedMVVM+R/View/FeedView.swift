@@ -19,7 +19,7 @@ final class FeedView: UIView {
         return collectionView
     }()
     //MARK: - collectionView delegates
-    private let collectionViewDataSource = FeedCollectionViewDataSource()
+    let collectionViewDataSource = FeedCollectionViewDataSource()
     let collectionViewDelegate = FeedCollectionViewDelegate()
     
     //MARK: - INIT

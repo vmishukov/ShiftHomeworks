@@ -9,15 +9,17 @@ import Foundation
 import UIKit
 
 final class FeedCollectionViewDataSource: NSObject, UICollectionViewDataSource {
-    let mockData = FeedDetailedModel.createMockData()
+    var feedData: [FeedViewData]?
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        mockData.count
+        guard let feedData = feedData else {return 0}
+        return feedData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let feedData = feedData else {return UICollectionViewCell()}
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FeedCollectionViewCell.identifier, for: indexPath) as? FeedCollectionViewCell else { return UICollectionViewCell() }
-        cell.setupData(with: mockData[indexPath.row].collectionModel)
+        cell.setupData(with: feedData[indexPath.row])
         return cell
     }
 }

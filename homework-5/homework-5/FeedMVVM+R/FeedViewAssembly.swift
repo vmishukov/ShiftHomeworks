@@ -15,7 +15,8 @@ final class FeedViewAssembly {
     }
     //MARK: - make module
     static func makeModule(dependencies: Dependencies) -> UIViewController {
-        let feedModel = FeedModel()
+        let networkManager = NetworkClient()
+        let feedModel = FeedModel(networkManager: networkManager)
         let feedRouter = FeedViewRouter(navigationController: dependencies.navigationController)
         let feedViewModel = FeedViewModel(router: feedRouter, model: feedModel)
         let viewController = FeedViewController(viewModel: feedViewModel)

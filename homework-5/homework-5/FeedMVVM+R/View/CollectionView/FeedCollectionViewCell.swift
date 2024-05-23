@@ -45,7 +45,7 @@ final class FeedCollectionViewCell: UICollectionViewCell {
     }
     
     //MARK: - public func
-    func setupData(with model: FeedCollectionModel) {
+    func setupData(with model: FeedViewData) {
         feedImageView.image = model.image
         feedLabel.text = model.title
     }

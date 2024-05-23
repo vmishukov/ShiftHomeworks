@@ -132,7 +132,7 @@ final class NetworkClient: NetworkClientProtocol {
              """
                         ,
                         sourceLink: "https://alcofan.com/stil-piva-vitbir.html"),
-                ]
+                ].shuffled()
             )
         }
     }

@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol FeedViewControllerDelegate: AnyObject {
-    func present(with data: FeedDetailedModel)
+    func present(id: Int)
 }
 
 final class FeedCollectionViewDelegate: NSObject, UICollectionViewDelegate {
@@ -24,8 +24,7 @@ final class FeedCollectionViewDelegate: NSObject, UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let data = FeedDetailedModel.createMockData()[indexPath.row]
-        viewControllerDelegate?.present(with: data)
+        viewControllerDelegate?.present(id: indexPath.row)
     }
 }
 

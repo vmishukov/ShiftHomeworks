@@ -54,7 +54,7 @@ class FeedViewController: UIViewController {
 
 //MARK: - FeedViewControllerDelegate
 extension FeedViewController: FeedViewControllerDelegate {
-    func present(with data: FeedDetailedModel) {
-        viewModel.showDetailedViewScreen(with: data)
+    func present(id: Int) {
+        viewModel.showDetailedViewScreen(with: id)
     }
 }

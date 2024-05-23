@@ -26,12 +26,19 @@ final class FeedViewModel {
         model.loadFeedData{ [weak self] feedData in
             guard let self = self else { return }
             self.feedNetworkData = feedData
-            setFeedViewData() 
+            setFeedViewData()
         }
     }
     
-    func showDetailedViewScreen(with data: FeedDetailedModel) {
-        router.showDetailedViewScreen(data: data)
+    func showDetailedViewScreen(with id: Int) {
+        guard let feedNetworkData = feedNetworkData else {return}
+        
+        let feedDateiledViewData = FeedDetailedModel(
+            title: feedNetworkData[id].title,
+            image:  feedNetworkData[id].image,
+            description: feedNetworkData[id].description,
+            sourceLink: feedNetworkData[id].sourceLink)
+        router.showDetailedViewScreen(data: feedDateiledViewData)
     }
     //MARK: - private func
     private func setFeedViewData() {

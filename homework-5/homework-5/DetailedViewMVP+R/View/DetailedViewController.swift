@@ -50,8 +50,8 @@ final class DetailedViewController: UIViewController {
 //MARK: - DetailedViewProtocol
 extension DetailedViewController: DetailedViewProtocol {
     func set(model: FeedDetailedModel) {
-        contentView.detailedImageView.image = model.collectionModel.image
-        contentView.detailedTitleLabel.text = model.collectionModel.title
+        contentView.detailedImageView.image = model.image
+        contentView.detailedTitleLabel.text = model.title
         contentView.detailedDescriptionLabel.text = model.description
         contentView.detailedSourceButton.addTarget(self, action: #selector(sourceButtonDidTap), for: .touchUpInside)
     }

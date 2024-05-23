@@ -32,7 +32,7 @@ class FeedViewController: UIViewController {
         setupNavbar()
         contentView.collectionViewDelegate.viewControllerDelegate = self
         bind()
-        viewModel.loadFeedData()
+        viewModel.timerUpdate()
     }
     override func viewWillTransition(to size: CGSize, with coordinator: any UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)

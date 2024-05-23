@@ -29,7 +29,11 @@ final class FeedViewModel {
             setFeedViewData()
         }
     }
-    
+    func timerUpdate() {
+        Timer.scheduledTimer(withTimeInterval: Double.random(in: 2...10), repeats: true) { [weak self] _ in
+            self?.loadFeedData()
+        }
+    }
     func showDetailedViewScreen(with id: Int) {
         guard let feedNetworkData = feedNetworkData else {return}
         

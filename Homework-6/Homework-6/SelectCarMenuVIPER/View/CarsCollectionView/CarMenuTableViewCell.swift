@@ -10,10 +10,6 @@ import UIKit
 
 final class CarMenuTableViewCell: UITableViewCell {
     //MARK: - setup font
-    enum CarMenuTableViewCellFonts {
-        static let carMake = UIFont.systemFont(ofSize: 16, weight: .bold)
-        static let carSelect = UIFont.systemFont(ofSize: 14, weight: .regular)
-    }
     //MARK: - identifier
     static let identifier = String(describing: CarMenuTableViewCell.self)
     //MARK: - UI

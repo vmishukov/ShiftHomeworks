@@ -14,6 +14,7 @@ final class CarMenuView: UIView {
         let tableView = UITableView(frame: .zero)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(CarMenuTableViewCell.self, forCellReuseIdentifier: CarMenuTableViewCell.identifier)
+        tableView.register(CarMenuTableViewHeader.self, forHeaderFooterViewReuseIdentifier: CarMenuTableViewHeader.identifier)
         return tableView
     }()
     let carMenuTableViewDataSource = CarMenuTableViewDataSource()

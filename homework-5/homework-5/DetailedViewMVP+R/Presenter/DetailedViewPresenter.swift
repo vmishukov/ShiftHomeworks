@@ -14,19 +14,20 @@ protocol DetailedViewPresenterProtocol {
 }
 
 final class DetailedViewPresenter {
-    //MARK: - private variables
+
     private let router: DetailedViewRouter
     private let detailedModel: FeedDetailedModel
-    //MARK: - weak var ui
+
     private weak var ui: DetailedViewProtocol?
-    //MARK: - INIT
+
     init(router: DetailedViewRouter, detailedModel: FeedDetailedModel) {
         self.router = router
         self.detailedModel = detailedModel
     }
 }
-//MARK: - DetailedViewPresenterProtocol
+
 extension DetailedViewPresenter: DetailedViewPresenterProtocol {
+    
     func showSourceViewScreen() {
         router.showSourceScreen(with: detailedModel.sourceLink)
     }

@@ -13,20 +13,21 @@ protocol DetailedViewProtocol: AnyObject {
 }
 
 final class DetailedViewController: UIViewController {
-    //MARK: - UI
+
     private let contentView = DetailedView()
-    //MARK: - private
+
     private let presenter: DetailedViewPresenterProtocol
-    //MARK: - init
+
     init(presenter: DetailedViewPresenterProtocol) {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
     }
+    
     @available(*,unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    //MARK: - lifecycle
+    
     override func loadView() {
         super.loadView()
         self.view = contentView
@@ -37,17 +38,17 @@ final class DetailedViewController: UIViewController {
         presenter.setUpModel()
         setupNavbar()
     }
-    //MARK: - OBJC
+    
     @objc
     private func sourceButtonDidTap() {
         presenter.showSourceViewScreen()
     }
-    //MARK: - Setup navbar
+
     private func setupNavbar() {
         navigationItem.title = "Детальная информация"
     }
 }
-//MARK: - DetailedViewProtocol
+
 extension DetailedViewController: DetailedViewProtocol {
     func set(model: FeedDetailedModel) {
         contentView.detailedImageView.image = model.image

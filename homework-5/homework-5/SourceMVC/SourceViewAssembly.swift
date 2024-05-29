@@ -9,11 +9,11 @@ import Foundation
 import UIKit
 
 final class SourceViewAssembly {
-    //MARK: - Dependencies
+
     struct Parameters {
         let sourceLink: String
     }
-    //MARK: - makemodule
+
     static func makeModule(with dependencies: Parameters) -> UIViewController {
         SourceViewController(with: dependencies.sourceLink)
     }

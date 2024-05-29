@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 final class DetailedView: UIView {
-    //MARK: - UI
+    
     let detailedImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -55,7 +55,6 @@ final class DetailedView: UIView {
         return button
     }()
     
-    //MARK: - INIT
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
@@ -67,13 +66,15 @@ final class DetailedView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 }
-//MARK: - SETUP
+//MARK: - UI CONFIGURE
 extension DetailedView {
+    
     func setupUI() {
         addSubview(detailedScrollView)
         detailedScrollView.addSubview(detailedStackView)
         backgroundColor = .systemBackground
     }
+    
     func setupConstraints() {
         NSLayoutConstraint.activate([
             detailedScrollView.topAnchor.constraint(equalTo: topAnchor),

@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 final class FeedView: UIView {
-    //MARK: - UI
+
     lazy var feedCollectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         
@@ -18,11 +18,10 @@ final class FeedView: UIView {
         addSubview(collectionView)
         return collectionView
     }()
-    //MARK: - collectionView delegates
+
     let collectionViewDataSource = FeedCollectionViewDataSource()
     let collectionViewDelegate = FeedCollectionViewDelegate()
     
-    //MARK: - INIT
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
@@ -32,7 +31,7 @@ final class FeedView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    //MARK: - setup ui
+    
     private func setupUI() {
         NSLayoutConstraint.activate([
             feedCollectionView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),

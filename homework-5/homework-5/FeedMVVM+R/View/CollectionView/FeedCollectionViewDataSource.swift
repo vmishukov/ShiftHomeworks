@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 final class FeedCollectionViewDataSource: NSObject, UICollectionViewDataSource {
+    
     var feedData: [FeedViewData]?
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

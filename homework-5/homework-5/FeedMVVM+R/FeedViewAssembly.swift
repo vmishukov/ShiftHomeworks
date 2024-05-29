@@ -9,11 +9,11 @@ import Foundation
 import UIKit
 
 final class FeedViewAssembly {
-    //MARK: - DEPENDENCIES
+    
     struct Dependencies {
         let navigationController: UINavigationController
     }
-    //MARK: - make module
+
     static func makeModule(dependencies: Dependencies) -> UIViewController {
         let networkManager = NetworkClient()
         let feedModel = FeedModel(networkManager: networkManager)

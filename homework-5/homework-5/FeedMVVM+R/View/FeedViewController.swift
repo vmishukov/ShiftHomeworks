@@ -8,11 +8,11 @@
 import UIKit
 
 class FeedViewController: UIViewController {
-    //MARK: - UI
+ 
     private let contentView = FeedView()
-    //MARK: - view model
+
     let viewModel: FeedViewModel
-    //MARK: - init
+
     init(viewModel: FeedViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -22,7 +22,7 @@ class FeedViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    //MARK: - lifecycle
+ 
     override func loadView() {
         super.loadView()
         view = contentView
@@ -39,11 +39,10 @@ class FeedViewController: UIViewController {
         contentView.feedCollectionView.collectionViewLayout.invalidateLayout()
     }
     
-    //MARK: - setup navbar
     private func setupNavbar() {
         navigationItem.title = "Пивная энциклопедия"
     }
-    //MARK: - BIND
+
     private func bind() {
         viewModel.feedViewData = { [weak self] feedData in
             self?.contentView.collectionViewDataSource.feedData = feedData
@@ -52,7 +51,6 @@ class FeedViewController: UIViewController {
     }
 }
 
-//MARK: - FeedViewControllerDelegate
 extension FeedViewController: FeedViewControllerDelegate {
     func present(id: Int) {
         viewModel.showDetailedViewScreen(with: id)

@@ -9,12 +9,13 @@ import Foundation
 import UIKit
 
 final class DetailedViewRouter {
+    
     private let navigationController: UINavigationController
-    //MARK: - init
+
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
-    //MARK: - public func
+
     func showSourceScreen(with sourceLink: String) {
         let parameters = SourceViewAssembly.Parameters(sourceLink: sourceLink)
         navigationController.present(SourceViewAssembly.makeModule(with: parameters), animated: true)

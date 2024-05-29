@@ -24,7 +24,6 @@ final class SourceViewController: UIViewController {
     }
 
     override func loadView() {
-        super.loadView()
         self.view = contentView
     }
     

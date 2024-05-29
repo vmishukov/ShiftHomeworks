@@ -30,13 +30,13 @@ final class FeedViewModel {
         }
     }
     
-    func timerUpdate() {
+    func viewDidLoad() {
         Timer.scheduledTimer(withTimeInterval: Double.random(in: 2...10), repeats: true) { [weak self] _ in
             self?.loadFeedData()
         }
     }
     
-    func showDetailedViewScreen(with id: Int) {
+    func didTapOnCell(with id: Int) {
         guard let feedNetworkData = feedNetworkData else {return}
         
         let feedDateiledViewData = FeedDetailedModel(

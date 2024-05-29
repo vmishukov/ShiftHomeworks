@@ -29,19 +29,17 @@ final class DetailedViewController: UIViewController {
     }
     
     override func loadView() {
-        super.loadView()
         self.view = contentView
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.didLoad(ui: self)
-        presenter.setUpModel()
         setupNavbar()
     }
     
     @objc
     private func sourceButtonDidTap() {
-        presenter.showSourceViewScreen()
+        presenter.sourceButtonDidTap()
     }
 
     private func setupNavbar() {

@@ -24,7 +24,6 @@ class FeedViewController: UIViewController {
     }
  
     override func loadView() {
-        super.loadView()
         view = contentView
     }
     override func viewDidLoad() {
@@ -32,7 +31,7 @@ class FeedViewController: UIViewController {
         setupNavbar()
         contentView.collectionViewDelegate.viewControllerDelegate = self
         bind()
-        viewModel.timerUpdate()
+        viewModel.viewDidLoad()
     }
     override func viewWillTransition(to size: CGSize, with coordinator: any UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
@@ -53,6 +52,6 @@ class FeedViewController: UIViewController {
 
 extension FeedViewController: FeedViewControllerDelegate {
     func present(id: Int) {
-        viewModel.showDetailedViewScreen(with: id)
+        viewModel.didTapOnCell(with: id)
     }
 }

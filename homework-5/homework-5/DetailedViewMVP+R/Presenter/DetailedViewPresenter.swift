@@ -9,8 +9,7 @@ import Foundation
 
 protocol DetailedViewPresenterProtocol {
     func didLoad(ui: DetailedViewProtocol)
-    func setUpModel()
-    func showSourceViewScreen()
+    func sourceButtonDidTap()
 }
 
 final class DetailedViewPresenter {
@@ -28,15 +27,16 @@ final class DetailedViewPresenter {
 
 extension DetailedViewPresenter: DetailedViewPresenterProtocol {
     
-    func showSourceViewScreen() {
+    func sourceButtonDidTap() {
         router.showSourceScreen(with: detailedModel.sourceLink)
     }
     
     func didLoad(ui: any DetailedViewProtocol) {
         self.ui = ui
+        setUpModel()
     }
     
-    func setUpModel() {
+   private func setUpModel() {
         ui?.set(model: detailedModel)
     }
 }

@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 final class CarMenuView: UIView {
-    //MARK: - UI
+
     private let carMenuTableView: UITableView = {
         let tableView = UITableView(frame: .zero)
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -19,7 +19,7 @@ final class CarMenuView: UIView {
     }()
     let carMenuTableViewDataSource = CarMenuTableViewDataSource()
     let carMenuTableViewDelegate = CarMenuTableViewDelegate()
-    //MARK: - INIT
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .systemBackground
@@ -29,7 +29,7 @@ final class CarMenuView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    //MARK: - constraits
+
     func setupUI() {
         addSubview(carMenuTableView)
         setupConstraits()

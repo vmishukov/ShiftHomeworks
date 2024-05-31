@@ -20,6 +20,15 @@
 		9190B9DD2C048EFC008EE186 /* SelectedCarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190B9DC2C048EFC008EE186 /* SelectedCarView.swift */; };
 		9190B9DF2C04C2E0008EE186 /* CarMenuTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190B9DE2C04C2E0008EE186 /* CarMenuTableViewHeader.swift */; };
 		9190B9E22C05AADC008EE186 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190B9E12C05AADC008EE186 /* Fonts.swift */; };
+		9190B9E92C0839BC008EE186 /* CarBodyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190B9E62C0839BC008EE186 /* CarBodyTableViewCell.swift */; };
+		9190B9EA2C0839BC008EE186 /* CarBodyTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190B9E52C0839BC008EE186 /* CarBodyTableViewHeader.swift */; };
+		9190B9EB2C0839BC008EE186 /* CarBodyTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190B9E72C0839BC008EE186 /* CarBodyTableViewDelegate.swift */; };
+		9190B9EC2C0839BC008EE186 /* CarBodyTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190B9E82C0839BC008EE186 /* CarBodyTableViewDataSource.swift */; };
+		9190B9F42C09A5A1008EE186 /* CarMenuAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190B9F32C09A5A1008EE186 /* CarMenuAssembly.swift */; };
+		9190B9F62C09ABBE008EE186 /* CarMenuPresenterProtocolPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190B9F52C09ABBE008EE186 /* CarMenuPresenterProtocolPresenter.swift */; };
+		9190B9F82C09ABF8008EE186 /* CarMenuPresenterProtocolInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190B9F72C09ABF8008EE186 /* CarMenuPresenterProtocolInteractor.swift */; };
+		9190B9FA2C09AC50008EE186 /* CarMenuPresenterProtocolRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190B9F92C09AC50008EE186 /* CarMenuPresenterProtocolRouter.swift */; };
+		9190B9FD2C09AEC5008EE186 /* CarMenuService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190B9FC2C09AEC5008EE186 /* CarMenuService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +47,15 @@
 		9190B9DC2C048EFC008EE186 /* SelectedCarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCarView.swift; sourceTree = "<group>"; };
 		9190B9DE2C04C2E0008EE186 /* CarMenuTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMenuTableViewHeader.swift; sourceTree = "<group>"; };
 		9190B9E12C05AADC008EE186 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		9190B9E52C0839BC008EE186 /* CarBodyTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarBodyTableViewHeader.swift; sourceTree = "<group>"; };
+		9190B9E62C0839BC008EE186 /* CarBodyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarBodyTableViewCell.swift; sourceTree = "<group>"; };
+		9190B9E72C0839BC008EE186 /* CarBodyTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarBodyTableViewDelegate.swift; sourceTree = "<group>"; };
+		9190B9E82C0839BC008EE186 /* CarBodyTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarBodyTableViewDataSource.swift; sourceTree = "<group>"; };
+		9190B9F32C09A5A1008EE186 /* CarMenuAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMenuAssembly.swift; sourceTree = "<group>"; };
+		9190B9F52C09ABBE008EE186 /* CarMenuPresenterProtocolPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMenuPresenterProtocolPresenter.swift; sourceTree = "<group>"; };
+		9190B9F72C09ABF8008EE186 /* CarMenuPresenterProtocolInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMenuPresenterProtocolInteractor.swift; sourceTree = "<group>"; };
+		9190B9F92C09AC50008EE186 /* CarMenuPresenterProtocolRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMenuPresenterProtocolRouter.swift; sourceTree = "<group>"; };
+		9190B9FC2C09AEC5008EE186 /* CarMenuService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMenuService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,9 +88,10 @@
 		9190B9AC2C031F1B008EE186 /* Homework-6 */ = {
 			isa = PBXGroup;
 			children = (
-				9190B9CC2C03292D008EE186 /* SelectCarMenuVIPER */,
+				9190B9CC2C03292D008EE186 /* CarMenuVIPER */,
 				9190B9CD2C032997008EE186 /* SelectedCarVIPER */,
 				9190B9E02C05AABA008EE186 /* DesignSystem */,
+				9190B9FB2C09AEA1008EE186 /* Services */,
 				9190B9AD2C031F1B008EE186 /* AppDelegate.swift */,
 				9190B9AF2C031F1B008EE186 /* SceneDelegate.swift */,
 				9190B9B62C031F1D008EE186 /* Assets.xcassets */,
@@ -82,23 +101,30 @@
 			path = "Homework-6";
 			sourceTree = "<group>";
 		};
-		9190B9CC2C03292D008EE186 /* SelectCarMenuVIPER */ = {
+		9190B9CC2C03292D008EE186 /* CarMenuVIPER */ = {
 			isa = PBXGroup;
 			children = (
+				9190B9F32C09A5A1008EE186 /* CarMenuAssembly.swift */,
 				9190B9CF2C0329BB008EE186 /* View */,
+				9190B9ED2C09A268008EE186 /* Interactor */,
+				9190B9EE2C09A28A008EE186 /* Presenter */,
+				9190B9EF2C09A29E008EE186 /* Router */,
 			);
-			path = SelectCarMenuVIPER;
+			path = CarMenuVIPER;
 			sourceTree = "<group>";
 		};
 		9190B9CD2C032997008EE186 /* SelectedCarVIPER */ = {
 			isa = PBXGroup;
 			children = (
 				9190B9D92C048EDA008EE186 /* View */,
+				9190B9F22C09A2BC008EE186 /* Interactor */,
+				9190B9F02C09A2BC008EE186 /* Presenter */,
+				9190B9F12C09A2BC008EE186 /* Route */,
 			);
 			path = SelectedCarVIPER;
 			sourceTree = "<group>";
 		};
-		9190B9CE2C0329A3008EE186 /* CarsCollectionView */ = {
+		9190B9CE2C0329A3008EE186 /* CarsTableView */ = {
 			isa = PBXGroup;
 			children = (
 				9190B9D32C032ACC008EE186 /* CarMenuTableViewCell.swift */,
@@ -106,7 +132,7 @@
 				9190B9D52C032AFD008EE186 /* CarMenuTableViewDataSource.swift */,
 				9190B9D72C032B31008EE186 /* CarMenuTableViewDelegate.swift */,
 			);
-			path = CarsCollectionView;
+			path = CarsTableView;
 			sourceTree = "<group>";
 		};
 		9190B9CF2C0329BB008EE186 /* View */ = {
@@ -114,7 +140,7 @@
 			children = (
 				9190B9D12C032AB0008EE186 /* CarMenuView.swift */,
 				9190B9B12C031F1B008EE186 /* CarMenuViewController.swift */,
-				9190B9CE2C0329A3008EE186 /* CarsCollectionView */,
+				9190B9CE2C0329A3008EE186 /* CarsTableView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -124,6 +150,7 @@
 			children = (
 				9190B9DA2C048EF0008EE186 /* SelectedCarViewController.swift */,
 				9190B9DC2C048EFC008EE186 /* SelectedCarView.swift */,
+				9190B9E42C0839BC008EE186 /* CarBodyTableView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -134,6 +161,70 @@
 				9190B9E12C05AADC008EE186 /* Fonts.swift */,
 			);
 			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		9190B9E42C0839BC008EE186 /* CarBodyTableView */ = {
+			isa = PBXGroup;
+			children = (
+				9190B9E62C0839BC008EE186 /* CarBodyTableViewCell.swift */,
+				9190B9E52C0839BC008EE186 /* CarBodyTableViewHeader.swift */,
+				9190B9E82C0839BC008EE186 /* CarBodyTableViewDataSource.swift */,
+				9190B9E72C0839BC008EE186 /* CarBodyTableViewDelegate.swift */,
+			);
+			path = CarBodyTableView;
+			sourceTree = "<group>";
+		};
+		9190B9ED2C09A268008EE186 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				9190B9F72C09ABF8008EE186 /* CarMenuPresenterProtocolInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		9190B9EE2C09A28A008EE186 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9190B9F52C09ABBE008EE186 /* CarMenuPresenterProtocolPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		9190B9EF2C09A29E008EE186 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				9190B9F92C09AC50008EE186 /* CarMenuPresenterProtocolRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		9190B9F02C09A2BC008EE186 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		9190B9F12C09A2BC008EE186 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		9190B9F22C09A2BC008EE186 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		9190B9FB2C09AEA1008EE186 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9190B9FC2C09AEC5008EE186 /* CarMenuService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,11 +303,20 @@
 				9190B9D82C032B31008EE186 /* CarMenuTableViewDelegate.swift in Sources */,
 				9190B9D62C032AFD008EE186 /* CarMenuTableViewDataSource.swift in Sources */,
 				9190B9D42C032ACC008EE186 /* CarMenuTableViewCell.swift in Sources */,
+				9190B9EB2C0839BC008EE186 /* CarBodyTableViewDelegate.swift in Sources */,
+				9190B9FD2C09AEC5008EE186 /* CarMenuService.swift in Sources */,
 				9190B9B22C031F1B008EE186 /* CarMenuViewController.swift in Sources */,
+				9190B9F42C09A5A1008EE186 /* CarMenuAssembly.swift in Sources */,
+				9190B9EA2C0839BC008EE186 /* CarBodyTableViewHeader.swift in Sources */,
 				9190B9AE2C031F1B008EE186 /* AppDelegate.swift in Sources */,
+				9190B9EC2C0839BC008EE186 /* CarBodyTableViewDataSource.swift in Sources */,
 				9190B9E22C05AADC008EE186 /* Fonts.swift in Sources */,
+				9190B9F82C09ABF8008EE186 /* CarMenuPresenterProtocolInteractor.swift in Sources */,
+				9190B9FA2C09AC50008EE186 /* CarMenuPresenterProtocolRouter.swift in Sources */,
+				9190B9F62C09ABBE008EE186 /* CarMenuPresenterProtocolPresenter.swift in Sources */,
 				9190B9DF2C04C2E0008EE186 /* CarMenuTableViewHeader.swift in Sources */,
 				9190B9B02C031F1B008EE186 /* SceneDelegate.swift in Sources */,
+				9190B9E92C0839BC008EE186 /* CarBodyTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

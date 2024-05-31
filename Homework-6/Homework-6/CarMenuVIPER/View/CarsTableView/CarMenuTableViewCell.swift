@@ -9,10 +9,9 @@ import Foundation
 import UIKit
 
 final class CarMenuTableViewCell: UITableViewCell {
-    //MARK: - setup font
-    //MARK: - identifier
+
     static let identifier = String(describing: CarMenuTableViewCell.self)
-    //MARK: - UI
+
     private let iconImage: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -31,7 +30,7 @@ final class CarMenuTableViewCell: UITableViewCell {
         label.font = CarMenuTableViewCellFonts.carSelect
         return label
     }()
-    //MARK: - init
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupUiStub()
@@ -42,7 +41,7 @@ final class CarMenuTableViewCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    //MARK: - setup ui
+
     func setupUiStub() {
         contentView.addSubview(iconImage)
         contentView.addSubview(carMakeLabel)
@@ -51,7 +50,7 @@ final class CarMenuTableViewCell: UITableViewCell {
         carSelectLabel.text = "Select"
         iconImage.image = .icon
     }
-    //MARK: - setup constraits
+
     func setupConstraits() {
         NSLayoutConstraint.activate([
             contentView.heightAnchor.constraint(equalToConstant: 40),

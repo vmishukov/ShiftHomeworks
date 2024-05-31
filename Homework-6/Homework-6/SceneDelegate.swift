@@ -14,8 +14,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
+
+        let navigationController = UINavigationController()
+        let carMenuService = CarMenuServiceImpl()
+        
+        let dependencies = CarMenuAssembly.Dependencies(navigationController: navigationController, carMenuService: carMenuService)
+        
+        let viewController = CarMenuAssembly.makeModule(dependencies: dependencies)
+        navigationController.viewControllers = [viewController]
+        
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController =  UINavigationController(rootViewController: CarMenuViewController())
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
 }

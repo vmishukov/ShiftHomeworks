@@ -9,5 +9,18 @@ import Foundation
 import UIKit
 
 final class SelectedCarViewController: UIViewController {
-    
+
+    private let contentView = SelectedCarView()
+  
+    override func loadView() {
+        super.loadView()
+        self.view = contentView
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupNavbar()
+    }
+  
+    private func setupNavbar() {
+    }
 }

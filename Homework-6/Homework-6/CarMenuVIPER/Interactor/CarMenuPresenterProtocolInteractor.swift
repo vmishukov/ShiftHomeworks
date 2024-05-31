@@ -8,14 +8,21 @@
 import Foundation
 
 protocol CarMenuInteractorProtocol {
-    
+    func getCarList(completion: @escaping([CarModel]) -> Void)
 }
 
 final class CarMenuInteractorImpl: CarMenuInteractorProtocol {
     
-    let carMenuServiuce: CarMenuServiceProtocol
+    let carMenuService: CarMenuServiceProtocol
     
     init(carMenuServiuce: CarMenuServiceProtocol) {
-        self.carMenuServiuce = carMenuServiuce
+        self.carMenuService = carMenuServiuce
+    }
+    
+    func getCarList(completion: @escaping ([CarModel]) -> Void) {
+        carMenuService.getCarList {
+            carModelDTO in
+            completion(carModelDTO.map{CarModel(with: $0)})
+        }
     }
 }

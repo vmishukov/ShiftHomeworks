@@ -33,7 +33,7 @@ final class CarMenuTableViewCell: UITableViewCell {
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        setupUiStub()
+        setupUI()
         setupConstraits()
     }
 
@@ -41,17 +41,20 @@ final class CarMenuTableViewCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    func configureCell(with carModel: String) {
+        carMakeLabel.text = carModel
+    }
 
-    func setupUiStub() {
+    private func setupUI() {
         contentView.addSubview(iconImage)
         contentView.addSubview(carMakeLabel)
         contentView.addSubview(carSelectLabel)
-        carMakeLabel.text = "BMV"
         carSelectLabel.text = "Select"
         iconImage.image = .icon
     }
 
-    func setupConstraits() {
+   private func setupConstraits() {
         NSLayoutConstraint.activate([
             contentView.heightAnchor.constraint(equalToConstant: 40),
         ])

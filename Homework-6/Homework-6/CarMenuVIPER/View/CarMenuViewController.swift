@@ -8,7 +8,7 @@
 import UIKit
 
 protocol CarMenuViewProtocol: AnyObject {
-    
+    func set(with: [CarModel]?)
 }
 
 class CarMenuViewController: UIViewController {
@@ -33,6 +33,7 @@ class CarMenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         contentView.carMenuTableViewDelegate.delegate = self
+        presenter.viewDidLoad(ui: self)
         setupNavbar()
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -52,7 +53,10 @@ extension CarMenuViewController: CarMenuTableViewCellDelegate {
 }
 
 extension CarMenuViewController: CarMenuViewProtocol {
-    
+    func set(with carList: [CarModel]?) {
+        contentView.carMenuTableViewDataSource.set(with: carList)
+        contentView.carMenuTableView.reloadData()
+    }
 }
 
 

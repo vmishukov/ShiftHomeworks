@@ -29,6 +29,8 @@
 		9190B9F82C09ABF8008EE186 /* CarMenuPresenterProtocolInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190B9F72C09ABF8008EE186 /* CarMenuPresenterProtocolInteractor.swift */; };
 		9190B9FA2C09AC50008EE186 /* CarMenuPresenterProtocolRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190B9F92C09AC50008EE186 /* CarMenuPresenterProtocolRouter.swift */; };
 		9190B9FD2C09AEC5008EE186 /* CarMenuService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190B9FC2C09AEC5008EE186 /* CarMenuService.swift */; };
+		9190B9FF2C09CD24008EE186 /* CarMenuDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190B9FE2C09CD24008EE186 /* CarMenuDTO.swift */; };
+		9190BA012C09CF45008EE186 /* CarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190BA002C09CF45008EE186 /* CarModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		9190B9F72C09ABF8008EE186 /* CarMenuPresenterProtocolInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMenuPresenterProtocolInteractor.swift; sourceTree = "<group>"; };
 		9190B9F92C09AC50008EE186 /* CarMenuPresenterProtocolRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMenuPresenterProtocolRouter.swift; sourceTree = "<group>"; };
 		9190B9FC2C09AEC5008EE186 /* CarMenuService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMenuService.swift; sourceTree = "<group>"; };
+		9190B9FE2C09CD24008EE186 /* CarMenuDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarMenuDTO.swift; sourceTree = "<group>"; };
+		9190BA002C09CF45008EE186 /* CarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				9190B9F72C09ABF8008EE186 /* CarMenuPresenterProtocolInteractor.swift */,
+				9190BA002C09CF45008EE186 /* CarModel.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -222,9 +227,18 @@
 		9190B9FB2C09AEA1008EE186 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				9190B9FC2C09AEC5008EE186 /* CarMenuService.swift */,
+				9190BA022C09DD60008EE186 /* CarMenuService */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		9190BA022C09DD60008EE186 /* CarMenuService */ = {
+			isa = PBXGroup;
+			children = (
+				9190B9FC2C09AEC5008EE186 /* CarMenuService.swift */,
+				9190B9FE2C09CD24008EE186 /* CarMenuDTO.swift */,
+			);
+			path = CarMenuService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,10 +327,12 @@
 				9190B9E22C05AADC008EE186 /* Fonts.swift in Sources */,
 				9190B9F82C09ABF8008EE186 /* CarMenuPresenterProtocolInteractor.swift in Sources */,
 				9190B9FA2C09AC50008EE186 /* CarMenuPresenterProtocolRouter.swift in Sources */,
+				9190BA012C09CF45008EE186 /* CarModel.swift in Sources */,
 				9190B9F62C09ABBE008EE186 /* CarMenuPresenterProtocolPresenter.swift in Sources */,
 				9190B9DF2C04C2E0008EE186 /* CarMenuTableViewHeader.swift in Sources */,
 				9190B9B02C031F1B008EE186 /* SceneDelegate.swift in Sources */,
 				9190B9E92C0839BC008EE186 /* CarBodyTableViewCell.swift in Sources */,
+				9190B9FF2C09CD24008EE186 /* CarMenuDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

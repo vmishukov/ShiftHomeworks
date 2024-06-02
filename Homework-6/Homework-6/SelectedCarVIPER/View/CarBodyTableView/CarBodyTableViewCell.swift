@@ -37,8 +37,13 @@ final class CarBodyTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(bodyName: String) {
+    func configure(bodyName: String, isChecked: Bool) {
         carMakeLabel.text = bodyName
+        if isChecked {
+            iconImage.image = .checked
+        } else {
+            iconImage.image = .uncheked
+        }
     }
     
     private func setupUi() {

@@ -15,6 +15,8 @@ struct SelectedCarViewModel {
 protocol SelectedCarViewProtocol: AnyObject {
     func setModel(with model: SelectedCarViewModel)
     func setTable(with model: [SelectedCarBodyTypesDataSource])
+    func setSelectedCell(with id: Int)
+    func setPrice(amount: Int)
 }
 
 final class SelectedCarViewController: UIViewController {
@@ -34,14 +36,24 @@ final class SelectedCarViewController: UIViewController {
     override func loadView() {
         super.loadView()
         self.view = contentView
+        contentView.carBodyTableViewDelegate.delegate = self
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.viewDidLoad(ui: self)
+        configureSelectedCarButton()
+    }
+    
+    private func configureSelectedCarButton() {
+        contentView.selectedCarButton.addTarget(self, action: #selector(configureSelectedCarButtonDidTapped), for: .touchUpInside)
+    }
+    @objc private func configureSelectedCarButtonDidTapped() {
+        presenter.calculateButtonDidTapped()
     }
 }
 
 extension SelectedCarViewController: SelectedCarViewProtocol {
+    
     func setTable(with model: [SelectedCarBodyTypesDataSource]) {
         contentView.carBodyTableViewDataSource.selectedCarBodyTypes = model
         contentView.carBodyTableView.reloadData()
@@ -51,4 +63,18 @@ extension SelectedCarViewController: SelectedCarViewProtocol {
         contentView.selectedСarImageView.image = model.image
     }
     
+    func setPrice(amount: Int) {
+        contentView.selectedCarPriceSumLabel.text = String(amount)
+    }
+    
+    func setSelectedCell(with id: Int) {
+        contentView.carBodyTableViewDataSource.checkedCellId = id
+        contentView.carBodyTableView.reloadData()
+    }
+}
+
+extension SelectedCarViewController: CarBodyTableViewCellDelegate {
+    func didTapOnTableCell(with id: Int) {
+        presenter.didTapOnTableCell(with: id)
+    }
 }

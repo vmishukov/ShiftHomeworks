@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol CarBodyTableViewCellDelegate: AnyObject {
-    func didTapOnTableCell()
+    func didTapOnTableCell(with id: Int)
 }
 
 final class CarBodyTableViewDelegate: NSObject, UITableViewDelegate {
@@ -28,6 +28,7 @@ final class CarBodyTableViewDelegate: NSObject, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        delegate?.didTapOnTableCell()
+        delegate?.didTapOnTableCell(with: indexPath.row)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

@@ -15,6 +15,7 @@ struct SelectedCarBodyTypesDataSource {
 final class CarBodyTableViewDataSource: NSObject, UITableViewDataSource {
     
     var selectedCarBodyTypes: [SelectedCarBodyTypesDataSource]?
+    var checkedCellId: Int = 0
     
     func numberOfSections(in tableView: UITableView) -> Int {
         1
@@ -32,7 +33,9 @@ final class CarBodyTableViewDataSource: NSObject, UITableViewDataSource {
         else {
             return UITableViewCell()
         }
-        cell.configure(bodyName: selectedCarBody.bodyType)
+        cell.configure(bodyName: selectedCarBody.bodyType
+                       ,isChecked: indexPath.row == checkedCellId)
+        
         return cell
     }
 }

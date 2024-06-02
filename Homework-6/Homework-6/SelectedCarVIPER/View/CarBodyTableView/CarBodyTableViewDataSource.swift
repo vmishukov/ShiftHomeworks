@@ -8,23 +8,31 @@
 import Foundation
 import UIKit
 
-final class CarBodyTableViewDataSource: NSObject, UITableViewDataSource {
+struct SelectedCarBodyTypesDataSource {
+    let bodyType: String
+}
 
+final class CarBodyTableViewDataSource: NSObject, UITableViewDataSource {
+    
+    var selectedCarBodyTypes: [SelectedCarBodyTypesDataSource]?
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        3
+        selectedCarBodyTypes?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(
             withIdentifier: CarBodyTableViewCell.identifier,
-            for: indexPath) as? CarBodyTableViewCell
+            for: indexPath) as? CarBodyTableViewCell,
+              let selectedCarBody = selectedCarBodyTypes?[indexPath.row]
         else {
             return UITableViewCell()
         }
+        cell.configure(bodyName: selectedCarBody.bodyType)
         return cell
     }
 }

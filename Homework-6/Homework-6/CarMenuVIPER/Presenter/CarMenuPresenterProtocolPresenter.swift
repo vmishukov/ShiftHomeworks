@@ -9,6 +9,7 @@ import Foundation
 
 protocol CarMenuPresenterProtocol {
     func viewDidLoad(ui: CarMenuViewProtocol)
+    func didTapOnTableCell(with id: Int)
 }
 
 final class CarMenuPresenterImpl: CarMenuPresenterProtocol {
@@ -27,6 +28,10 @@ final class CarMenuPresenterImpl: CarMenuPresenterProtocol {
     func viewDidLoad(ui: any CarMenuViewProtocol) {
         self.ui = ui
         getCarList()
+    }
+    
+    func didTapOnTableCell(with id: Int) {
+        router.showSelectedCarScreen(with: carList[id].carId)
     }
 }
 

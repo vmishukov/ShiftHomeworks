@@ -46,9 +46,8 @@ class CarMenuViewController: UIViewController {
 }
 
 extension CarMenuViewController: CarMenuTableViewCellDelegate {
-    func didTapOnTableCell() {
-        let vc = SelectedCarViewController()
-        navigationController?.pushViewController(vc, animated: true)
+    func didTapOnTableCell(with id: Int) {
+        presenter.didTapOnTableCell(with: id)
     }
 }
 

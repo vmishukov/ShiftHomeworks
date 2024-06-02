@@ -15,4 +15,11 @@ final class CarMenuRouter {
         self.navigationController = navigationController
     }
     
+    func showSelectedCarScreen(with id: Int) {
+        let service = SelectedCarServiceImpl()
+        let dependencies =  SelectedCarAssembly.Dependencies(selectedCarService: service)
+        let parameters = SelectedCarAssembly.Parameters(carId: id)
+        let viewController = SelectedCarAssembly.makeModule(dependencies: dependencies, parameters: parameters)
+        navigationController.pushViewController(viewController, animated: true)
+    }
 }

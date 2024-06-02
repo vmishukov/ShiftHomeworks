@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+
 final class SelectedCarView: UIView {
     
     let selectedСarImageView: UIImageView = {
@@ -28,12 +29,6 @@ final class SelectedCarView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = CarMenuTableViewCellFonts.carHeader
         return label
-    }()
-    
-    let selectedCarBodyTableView: UITableView = {
-        let tableView = UITableView(frame: .zero)
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        return tableView
     }()
     
     let selectedCarButton: UIButton = {

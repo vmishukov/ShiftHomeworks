@@ -20,6 +20,8 @@ final class CarMenuServiceImpl: CarMenuServiceProtocol {
                     CarMenuDTO(id: 23, name: "Toyota"),
                     CarMenuDTO(id: 41, name: "Nissan"),
                     CarMenuDTO(id: 3, name: "Kia"),
+                    CarMenuDTO(id: 32, name: "Volkswagen"),
+                    CarMenuDTO(id: 232, name: "BMW"),
                 ]
             )
         }

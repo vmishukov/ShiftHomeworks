@@ -14,6 +14,7 @@ final class SelectedCarView: UIView {
     let selectedСarImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFit
         return imageView
     }()
     

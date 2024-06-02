@@ -19,7 +19,7 @@ final class SelectedCarView: UIView {
     
     let selectedCarPriceLabel: UILabel = {
         let label = UILabel()
-        label.font = CarMenuTableViewCellFonts.carHeader
+        label.font = ProjectFonts.carHeader
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -27,12 +27,17 @@ final class SelectedCarView: UIView {
     let selectedCarPriceSumLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = CarMenuTableViewCellFonts.carHeader
+        label.font = ProjectFonts.carMake
         return label
     }()
     
     let selectedCarButton: UIButton = {
         let button = UIButton(type: .system)
+        button.setTitle("Рассчитать цену", for: .normal)
+        button.backgroundColor = ProjectColors.green
+        button.setTitleColor(.white, for: .normal)
+        button.layer.masksToBounds = true
+        button.layer.cornerRadius = 25
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -40,6 +45,11 @@ final class SelectedCarView: UIView {
     let carBodyTableView: UITableView = {
         let tableView = UITableView(frame: .zero)
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.separatorInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        if #available(iOS 15.0, *)
+        {
+            tableView.sectionHeaderTopPadding = 0.0
+        }
         tableView.register(CarBodyTableViewCell.self, forCellReuseIdentifier: CarBodyTableViewCell.identifier)
         tableView.register(CarBodyTableViewHeader.self, forHeaderFooterViewReuseIdentifier: CarBodyTableViewHeader.identifier)
         return tableView
@@ -70,9 +80,7 @@ final class SelectedCarView: UIView {
         carBodyTableView.dataSource = carBodyTableViewDataSource
         carBodyTableView.delegate = carBodyTableViewDelegate
         
-        selectedCarButton.setTitle("Рассчитать цену", for: .normal)
-        selectedCarButton.backgroundColor = .systemGreen
-        selectedCarButton.setTitleColor(.white, for: .normal)
+   
         
         addSubview(selectedСarImageView)
         addSubview(selectedCarPriceLabel)
@@ -90,7 +98,7 @@ final class SelectedCarView: UIView {
             selectedСarImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             selectedСarImageView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
             selectedСarImageView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 16),
-            selectedСarImageView.heightAnchor.constraint(equalToConstant: screenHeight * 0.30)
+            selectedСarImageView.heightAnchor.constraint(equalToConstant: screenHeight * 0.25)
         ])
         NSLayoutConstraint.activate([
             selectedCarPriceLabel.leadingAnchor.constraint(equalTo: selectedСarImageView.leadingAnchor),
@@ -106,7 +114,7 @@ final class SelectedCarView: UIView {
             selectedCarButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             selectedCarButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
             selectedCarButton.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -8),
-            selectedCarButton.heightAnchor.constraint(equalToConstant: screenHeight * 0.07)
+            selectedCarButton.heightAnchor.constraint(equalToConstant: screenHeight * 0.06)
             
         ])
         NSLayoutConstraint.activate([

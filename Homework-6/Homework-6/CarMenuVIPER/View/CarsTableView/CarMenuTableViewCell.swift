@@ -20,14 +20,14 @@ final class CarMenuTableViewCell: UITableViewCell {
     private let carMakeLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = CarMenuTableViewCellFonts.carMake
+        label.font = ProjectFonts.carMake
 
         return label
     }()
     private let carSelectLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = CarMenuTableViewCellFonts.carSelect
+        label.font = ProjectFonts.carSelect
         return label
     }()
 
@@ -47,29 +47,30 @@ final class CarMenuTableViewCell: UITableViewCell {
     }
 
     private func setupUI() {
+        
         contentView.addSubview(iconImage)
         contentView.addSubview(carMakeLabel)
         contentView.addSubview(carSelectLabel)
         carSelectLabel.text = "Select"
         iconImage.image = .icon
+         
     }
 
    private func setupConstraits() {
+
         NSLayoutConstraint.activate([
-            contentView.heightAnchor.constraint(equalToConstant: 40),
-        ])
-        NSLayoutConstraint.activate([
-            iconImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            iconImage.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 2),
+            iconImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor,constant: 16),
+            iconImage.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
             iconImage.heightAnchor.constraint(equalToConstant: 16),
             iconImage.widthAnchor.constraint(equalToConstant: 16),
         ])
+      
         NSLayoutConstraint.activate([
-            carMakeLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 3),
+            carMakeLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
             carMakeLabel.leadingAnchor.constraint(equalTo: iconImage.trailingAnchor, constant: 16),
         ])
         NSLayoutConstraint.activate([
-            carSelectLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            carSelectLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
             carSelectLabel.topAnchor.constraint(equalTo: carMakeLabel.topAnchor),
         ])
     }

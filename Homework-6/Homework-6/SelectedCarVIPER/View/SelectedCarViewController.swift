@@ -42,15 +42,22 @@ final class SelectedCarViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+
         configureSelectedCarButton()
         contentView.carBodyTableViewDelegate.delegate = self
         presenter.viewDidLoad(ui: self)
     }
-
+    
+    private func setupNavbar() {
+  
+    }
     private func configureSelectedCarButton() {
         contentView.selectedCarButton.addTarget(self, action: #selector(configureSelectedCarButtonDidTapped), for: .touchUpInside)
     }
     @objc private func configureSelectedCarButtonDidTapped() {
+        presenter.calculateButtonDidTapped()
+    }
+    @objc private func backButtonDidTapped() {
         presenter.calculateButtonDidTapped()
     }
 }
@@ -77,7 +84,7 @@ extension SelectedCarViewController: SelectedCarViewProtocol {
     }
     
     func setPrice(amount: Int) {
-        contentView.selectedCarPriceSumLabel.text = String(amount)
+        contentView.selectedCarPriceSumLabel.text = String(amount) + "$"
     }
     
     func setSelectedCell(with id: Int) {

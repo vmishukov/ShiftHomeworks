@@ -21,7 +21,7 @@ final class CarBodyTableViewCell: UITableViewCell {
     private let carMakeLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = CarMenuTableViewCellFonts.carMake
+        label.font = ProjectFonts.carMake
 
         return label
     }()
@@ -52,17 +52,15 @@ final class CarBodyTableViewCell: UITableViewCell {
         iconImage.image = .icon
     }
    private func setupConstraits() {
+
         NSLayoutConstraint.activate([
-            contentView.heightAnchor.constraint(equalToConstant: 40),
-        ])
-        NSLayoutConstraint.activate([
-            carMakeLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            carMakeLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 2),
+            carMakeLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor,constant: 16),
+            carMakeLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
 
         ])
         NSLayoutConstraint.activate([
             iconImage.trailingAnchor.constraint(equalTo: contentView.trailingAnchor,constant: -16),
-            iconImage.topAnchor.constraint(equalTo: carMakeLabel.topAnchor),
+            iconImage.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             iconImage.heightAnchor.constraint(equalToConstant: 16),
             iconImage.widthAnchor.constraint(equalToConstant: 16),
         ])

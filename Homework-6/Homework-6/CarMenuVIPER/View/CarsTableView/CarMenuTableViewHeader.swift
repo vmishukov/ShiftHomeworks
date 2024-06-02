@@ -14,7 +14,7 @@ final class CarMenuTableViewHeader: UITableViewHeaderFooterView {
     //MARK: - UI
     let headerLabel: UILabel = {
         let label = UILabel()
-        label.font = CarMenuTableViewCellFonts.carHeader
+        label.font = ProjectFonts.carHeader
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()

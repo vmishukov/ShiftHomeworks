@@ -41,7 +41,17 @@ class CarMenuViewController: UIViewController {
     }
 
     private func setupNavbar() {
-        navigationItem.title = "Выберите"
+        let titleLabel: UILabel = {
+            let label = UILabel()
+            label.font = ProjectFonts.carTitle
+            label.text = "Выберите"
+            return label
+        }()
+        navigationItem.titleView = titleLabel
+        navigationController?.navigationBar.tintColor = ProjectColors.green
+        navigationController?.navigationBar.backIndicatorImage = UIImage()
+        navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage()
+       
     }
 }
 

@@ -12,7 +12,13 @@ final class CarMenuView: UIView {
     
     let carMenuTableView: UITableView = {
         let tableView = UITableView(frame: .zero)
+        tableView.separatorStyle = .singleLine
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.separatorInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+        if #available(iOS 15.0, *)
+        {
+            tableView.sectionHeaderTopPadding = 0.0
+        }
         tableView.register(CarMenuTableViewCell.self, forCellReuseIdentifier: CarMenuTableViewCell.identifier)
         tableView.register(CarMenuTableViewHeader.self, forHeaderFooterViewReuseIdentifier: CarMenuTableViewHeader.identifier)
         return tableView
@@ -40,9 +46,9 @@ final class CarMenuView: UIView {
     private func setupConstraits() {
         NSLayoutConstraint.activate([
             carMenuTableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 8),
-            carMenuTableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -8),
-            carMenuTableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 8),
-            carMenuTableView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -8),
+            carMenuTableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+            carMenuTableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
+            carMenuTableView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
         ])
     }
 }

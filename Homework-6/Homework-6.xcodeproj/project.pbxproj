@@ -37,6 +37,7 @@
 		9190BA0B2C09F6E8008EE186 /* SelectedCarService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190BA0A2C09F6E8008EE186 /* SelectedCarService.swift */; };
 		9190BA0D2C09F766008EE186 /* SelectedCarDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9190BA0C2C09F766008EE186 /* SelectedCarDTO.swift */; };
 		91F4D7842C0B57C6004B2DBA /* SelectedCarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F4D7832C0B57C6004B2DBA /* SelectedCarModel.swift */; };
+		91F4D7862C0C71A8004B2DBA /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F4D7852C0C71A8004B2DBA /* SpinnerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		9190BA0A2C09F6E8008EE186 /* SelectedCarService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCarService.swift; sourceTree = "<group>"; };
 		9190BA0C2C09F766008EE186 /* SelectedCarDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCarDTO.swift; sourceTree = "<group>"; };
 		91F4D7832C0B57C6004B2DBA /* SelectedCarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedCarModel.swift; sourceTree = "<group>"; };
+		91F4D7852C0C71A8004B2DBA /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 			children = (
 				9190B9DA2C048EF0008EE186 /* SelectedCarViewController.swift */,
 				9190B9DC2C048EFC008EE186 /* SelectedCarView.swift */,
+				91F4D7852C0C71A8004B2DBA /* SpinnerViewController.swift */,
 				9190B9E42C0839BC008EE186 /* CarBodyTableView */,
 			);
 			path = View;
@@ -351,6 +354,7 @@
 				9190B9F42C09A5A1008EE186 /* CarMenuAssembly.swift in Sources */,
 				9190B9EA2C0839BC008EE186 /* CarBodyTableViewHeader.swift in Sources */,
 				91F4D7842C0B57C6004B2DBA /* SelectedCarModel.swift in Sources */,
+				91F4D7862C0C71A8004B2DBA /* SpinnerViewController.swift in Sources */,
 				9190B9AE2C031F1B008EE186 /* AppDelegate.swift in Sources */,
 				9190B9EC2C0839BC008EE186 /* CarBodyTableViewDataSource.swift in Sources */,
 				9190B9E22C05AADC008EE186 /* Fonts.swift in Sources */,

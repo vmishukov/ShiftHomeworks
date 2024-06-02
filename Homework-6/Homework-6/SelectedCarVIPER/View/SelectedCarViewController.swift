@@ -17,12 +17,15 @@ protocol SelectedCarViewProtocol: AnyObject {
     func setTable(with model: [SelectedCarBodyTypesDataSource])
     func setSelectedCell(with id: Int)
     func setPrice(amount: Int)
+    func showLoadingIndicator()
+    func hideLoadingIndicator()
 }
 
 final class SelectedCarViewController: UIViewController {
-
+    
     private let contentView = SelectedCarView()
     private let presenter: SelectedCarPresenterProtocol
+    private let loadingView = SpinnerViewController()
     
     init(presenter: SelectedCarPresenterProtocol) {
         self.presenter = presenter
@@ -36,14 +39,14 @@ final class SelectedCarViewController: UIViewController {
     override func loadView() {
         super.loadView()
         self.view = contentView
-        contentView.carBodyTableViewDelegate.delegate = self
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter.viewDidLoad(ui: self)
         configureSelectedCarButton()
+        contentView.carBodyTableViewDelegate.delegate = self
+        presenter.viewDidLoad(ui: self)
     }
-    
+
     private func configureSelectedCarButton() {
         contentView.selectedCarButton.addTarget(self, action: #selector(configureSelectedCarButtonDidTapped), for: .touchUpInside)
     }
@@ -53,6 +56,16 @@ final class SelectedCarViewController: UIViewController {
 }
 
 extension SelectedCarViewController: SelectedCarViewProtocol {
+    
+    func showLoadingIndicator() {
+        contentView.spinner.startAnimating()
+        contentView.selectedCarButton.isEnabled = false
+    }
+    
+    func hideLoadingIndicator() {
+        contentView.spinner.stopAnimating()
+        contentView.selectedCarButton.isEnabled = true
+    }
     
     func setTable(with model: [SelectedCarBodyTypesDataSource]) {
         contentView.carBodyTableViewDataSource.selectedCarBodyTypes = model

@@ -44,6 +44,13 @@ final class SelectedCarView: UIView {
         tableView.register(CarBodyTableViewHeader.self, forHeaderFooterViewReuseIdentifier: CarBodyTableViewHeader.identifier)
         return tableView
     }()
+    
+    let spinner: UIActivityIndicatorView = {
+        let spinner =  UIActivityIndicatorView(style: .large)
+        spinner.translatesAutoresizingMaskIntoConstraints = false
+        return spinner
+    }()
+    
     let carBodyTableViewDataSource = CarBodyTableViewDataSource()
     let carBodyTableViewDelegate = CarBodyTableViewDelegate()
     
@@ -59,8 +66,6 @@ final class SelectedCarView: UIView {
     func setUpUI() {
         backgroundColor = .systemBackground
         selectedCarPriceLabel.text = "Цена"
-        selectedCarPriceSumLabel.text = "228"
-        selectedСarImageView.image = .carStub
         
         carBodyTableView.dataSource = carBodyTableViewDataSource
         carBodyTableView.delegate = carBodyTableViewDelegate
@@ -74,10 +79,11 @@ final class SelectedCarView: UIView {
         addSubview(selectedCarPriceSumLabel)
         addSubview(selectedCarButton)
         addSubview(carBodyTableView)
+        addSubview(spinner)
+        
     }
     
     func setUpConstraints() {
-        // let screenWidth = UIScreen.main.bounds.width
         let screenHeight = UIScreen.main.bounds.height
         
         NSLayoutConstraint.activate([
@@ -108,6 +114,10 @@ final class SelectedCarView: UIView {
             carBodyTableView.leadingAnchor.constraint(equalTo: leadingAnchor),
             carBodyTableView.trailingAnchor.constraint(equalTo: trailingAnchor),
             carBodyTableView.bottomAnchor.constraint(equalTo: selectedCarButton.topAnchor, constant: -8)
+        ])
+        NSLayoutConstraint.activate([
+            spinner.centerXAnchor.constraint(equalTo: centerXAnchor),
+            spinner.centerYAnchor.constraint(equalTo: centerYAnchor),
         ])
     }
 }

@@ -62,15 +62,18 @@ final class SelectedCarPresenterImpl: SelectedCarPresenterProtocol {
     }
     
     private func loadSelectedCarModel() {
+        ui?.showLoadingIndicator()
         interactor.getSelectedCar(by: carId) { [weak self] selectedCarModel in
-            self?.selectedCarModel = selectedCarModel
+            guard let self = self else { return }
+            self.selectedCarModel = selectedCarModel
             guard let selectedCarModel = selectedCarModel else { return }
             
-            self?.updateCarImage(with: 0)
-            self?.updatePrice(with: 0)
+            self.updateCarImage(with: 0)
+            self.updatePrice(with: 0)
             
             let carBodyModel = selectedCarModel.modelTypes.map { SelectedCarBodyTypesDataSource(bodyType: $0.bodyType)}
-            self?.ui?.setTable(with: carBodyModel)
+            self.ui?.setTable(with: carBodyModel)
+            self.ui?.hideLoadingIndicator()
         }
     }
 }

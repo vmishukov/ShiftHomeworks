@@ -13,7 +13,7 @@ protocol SelectedCarServiceProtocol {
 
 final class SelectedCarServiceImpl: SelectedCarServiceProtocol {
     func getCarData(by id: Int, completion: @escaping (SelectedCarDTO?) -> Void) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             completion( self.CarNetworkStorage.first(where: {
                 $0.id == id}))
         }

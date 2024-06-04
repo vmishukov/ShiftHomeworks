@@ -5,15 +5,18 @@
       location = "group:homework-1/homework-1.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:homework-1/../homework-2/homework-2.xcodeproj">
+      location = "group:homework-2/homework-2.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:homework-1/homework-1/../../homework-3/homework-3.xcodeproj">
+      location = "group:homework-3/homework-3.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:homework-4/homework-4.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:homework-4/../homework-5/homework-5.xcodeproj">
+      location = "group:homework-5/homework-5.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Homework-6/Homework-6.xcodeproj">
    </FileRef>
 </Workspace>

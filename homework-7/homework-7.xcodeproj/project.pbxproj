@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		917106472C15FB0200ECA482 /* UploaderPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917106462C15FB0200ECA482 /* UploaderPresenter.swift */; };
+		9171064A2C15FB1800ECA482 /* UploaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917106492C15FB1800ECA482 /* UploaderModel.swift */; };
 		91F4D79D2C0F4FAD004B2DBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F4D79C2C0F4FAD004B2DBA /* AppDelegate.swift */; };
 		91F4D79F2C0F4FAD004B2DBA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F4D79E2C0F4FAD004B2DBA /* SceneDelegate.swift */; };
 		91F4D7A12C0F4FAD004B2DBA /* UploaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F4D7A02C0F4FAD004B2DBA /* UploaderViewController.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		917106462C15FB0200ECA482 /* UploaderPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploaderPresenter.swift; sourceTree = "<group>"; };
+		917106492C15FB1800ECA482 /* UploaderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploaderModel.swift; sourceTree = "<group>"; };
 		91F4D7992C0F4FAD004B2DBA /* homework-7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "homework-7.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F4D79C2C0F4FAD004B2DBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91F4D79E2C0F4FAD004B2DBA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +45,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		917106442C15FAD800ECA482 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				91F4D7B72C0F51B5004B2DBA /* UploaderView.swift */,
+				91F4D7A02C0F4FAD004B2DBA /* UploaderViewController.swift */,
+				91F4D7B92C0F51D1004B2DBA /* UploaderTableView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		917106452C15FAF100ECA482 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				917106462C15FB0200ECA482 /* UploaderPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		917106482C15FB0700ECA482 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				917106492C15FB1800ECA482 /* UploaderModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		91F4D7902C0F4FAD004B2DBA = {
 			isa = PBXGroup;
 			children = (
@@ -73,9 +103,9 @@
 		91F4D7B62C0F5139004B2DBA /* Uploader */ = {
 			isa = PBXGroup;
 			children = (
-				91F4D7B92C0F51D1004B2DBA /* UploaderTableView */,
-				91F4D7A02C0F4FAD004B2DBA /* UploaderViewController.swift */,
-				91F4D7B72C0F51B5004B2DBA /* UploaderView.swift */,
+				917106482C15FB0700ECA482 /* Model */,
+				917106442C15FAD800ECA482 /* View */,
+				917106452C15FAF100ECA482 /* Presenter */,
 			);
 			path = Uploader;
 			sourceTree = "<group>";
@@ -160,7 +190,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				91F4D7B82C0F51B5004B2DBA /* UploaderView.swift in Sources */,
+				917106472C15FB0200ECA482 /* UploaderPresenter.swift in Sources */,
 				91F4D7A12C0F4FAD004B2DBA /* UploaderViewController.swift in Sources */,
+				9171064A2C15FB1800ECA482 /* UploaderModel.swift in Sources */,
 				91F4D79D2C0F4FAD004B2DBA /* AppDelegate.swift in Sources */,
 				91F4D7BD2C0F5271004B2DBA /* UploadTableViewDelegate.swift in Sources */,
 				91F4D79F2C0F4FAD004B2DBA /* SceneDelegate.swift in Sources */,

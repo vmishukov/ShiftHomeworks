@@ -37,7 +37,3 @@ final class UploaderModel {
         service.validateURLFormat(urlString: urlString)
     }
 }
-
-private extension UploaderModel {
-    
-}

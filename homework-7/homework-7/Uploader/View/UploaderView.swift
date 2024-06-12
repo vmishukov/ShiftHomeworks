@@ -28,7 +28,7 @@ final class UploaderView: UIView {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.textAlignment = .center
-        label.text = "Введите изображение"
+        label.text = "Введите ссылку на изображение"
         label.numberOfLines = 0
         return label
     }()

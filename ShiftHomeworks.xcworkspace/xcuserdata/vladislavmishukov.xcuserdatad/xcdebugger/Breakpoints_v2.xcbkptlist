@@ -3,4 +3,112 @@
    uuid = "8E9E4FB8-71CE-4D14-9F57-331588BF3681"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CF352A57-C682-493F-8D21-745C59387631"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "homework-7/homework-7/Uploader/Model/UploaderModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "loadImage(with:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CF352A57-C682-493F-8D21-745C59387631 - ea1072fc2cc55c0a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for homework_7.UploaderModel.loadImage(with: Swift.String) async throws -&gt; Swift.Optional&lt;__C.UIImage&gt;"
+                  moduleName = "homework-7"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Applications/Swift%20projects/ShiftHomeWork6/homework-7/homework-7/Uploader/Model/UploaderModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27">
+               </Location>
+               <Location
+                  uuid = "CF352A57-C682-493F-8D21-745C59387631 - 6c4bd5e3b1902837"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for homework_7.UploaderModel.loadImage(with: Swift.String) async throws -&gt; Swift.Optional&lt;__C.UIImage&gt;"
+                  moduleName = "homework-7"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Applications/Swift%20projects/ShiftHomeWork6/homework-7/homework-7/Uploader/Model/UploaderModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27">
+               </Location>
+               <Location
+                  uuid = "CF352A57-C682-493F-8D21-745C59387631 - 262ae94023f39008"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for homework_7.UploaderModel.loadImage(with: Swift.String) async throws -&gt; Swift.Optional&lt;__C.UIImage&gt;"
+                  moduleName = "homework-7"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Applications/Swift%20projects/ShiftHomeWork6/homework-7/homework-7/Uploader/Model/UploaderModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27">
+               </Location>
+               <Location
+                  uuid = "CF352A57-C682-493F-8D21-745C59387631 - dc49a48a5c677607"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for homework_7.UploaderModel.loadImage(with: Swift.String) async throws -&gt; Swift.Optional&lt;__C.UIImage&gt;"
+                  moduleName = "homework-7"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Applications/Swift%20projects/ShiftHomeWork6/homework-7/homework-7/Uploader/Model/UploaderModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "40FD92AE-9293-444C-BFD3-60EB0198EB74"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "homework-7/homework-7/Uploader/Model/UploaderModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "loadImage(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EC33FDE0-34C4-40DF-A305-40317B06FABB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "homework-7/homework-7/Uploader/Model/UploaderModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "loadImage(with:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

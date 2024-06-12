@@ -16,16 +16,20 @@ final class UploaderModel {
         self.service = service
     }
     
+    enum modelErrors: Error {
+        case notAnImageData
+    }
+    
     func loadImage(with urlString: String) async throws -> UIImage? {
+        
         do {
             guard
                 let imageData = try await service.loadImage(with: urlString),
                 let image = UIImage(data: imageData)
-            else { return nil }
+            else { throw modelErrors.notAnImageData }
             return image
         } catch let error{
-            print(error)
-            return nil
+            throw error
         }
     }
     

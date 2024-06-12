@@ -41,7 +41,7 @@ private extension UploaderService {
     
     func makeRequest(with urlString: String) -> URLRequest? {
         
-        var baseComponent = URLComponents(string: urlString)
+        let baseComponent = URLComponents(string: urlString)
         guard let baseUrlComponent = baseComponent?.url else {
             return nil
         }

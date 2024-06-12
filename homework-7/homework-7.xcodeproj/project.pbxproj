@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		917106472C15FB0200ECA482 /* UploaderPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917106462C15FB0200ECA482 /* UploaderPresenter.swift */; };
 		9171064A2C15FB1800ECA482 /* UploaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917106492C15FB1800ECA482 /* UploaderModel.swift */; };
+		9171064E2C15FD2100ECA482 /* UploaderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9171064D2C15FD2100ECA482 /* UploaderService.swift */; };
+		917106502C15FD8B00ECA482 /* AsyncNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9171064F2C15FD8B00ECA482 /* AsyncNetworkClient.swift */; };
+		91DA32862C198C9C00A7479C /* UploaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91DA32852C198C9C00A7479C /* UploaderTableViewCell.swift */; };
 		91F4D79D2C0F4FAD004B2DBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F4D79C2C0F4FAD004B2DBA /* AppDelegate.swift */; };
 		91F4D79F2C0F4FAD004B2DBA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F4D79E2C0F4FAD004B2DBA /* SceneDelegate.swift */; };
 		91F4D7A12C0F4FAD004B2DBA /* UploaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F4D7A02C0F4FAD004B2DBA /* UploaderViewController.swift */; };
@@ -16,12 +19,14 @@
 		91F4D7A92C0F4FAE004B2DBA /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 91F4D7A82C0F4FAE004B2DBA /* Base */; };
 		91F4D7B82C0F51B5004B2DBA /* UploaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F4D7B72C0F51B5004B2DBA /* UploaderView.swift */; };
 		91F4D7BB2C0F51EA004B2DBA /* UploaderTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F4D7BA2C0F51EA004B2DBA /* UploaderTableViewDataSource.swift */; };
-		91F4D7BD2C0F5271004B2DBA /* UploadTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F4D7BC2C0F5271004B2DBA /* UploadTableViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		917106462C15FB0200ECA482 /* UploaderPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploaderPresenter.swift; sourceTree = "<group>"; };
 		917106492C15FB1800ECA482 /* UploaderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploaderModel.swift; sourceTree = "<group>"; };
+		9171064D2C15FD2100ECA482 /* UploaderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploaderService.swift; sourceTree = "<group>"; };
+		9171064F2C15FD8B00ECA482 /* AsyncNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncNetworkClient.swift; sourceTree = "<group>"; };
+		91DA32852C198C9C00A7479C /* UploaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploaderTableViewCell.swift; sourceTree = "<group>"; };
 		91F4D7992C0F4FAD004B2DBA /* homework-7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "homework-7.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F4D79C2C0F4FAD004B2DBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91F4D79E2C0F4FAD004B2DBA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,7 +36,6 @@
 		91F4D7AA2C0F4FAE004B2DBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91F4D7B72C0F51B5004B2DBA /* UploaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploaderView.swift; sourceTree = "<group>"; };
 		91F4D7BA2C0F51EA004B2DBA /* UploaderTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploaderTableViewDataSource.swift; sourceTree = "<group>"; };
-		91F4D7BC2C0F5271004B2DBA /* UploadTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadTableViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,22 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		9171064B2C15FCEB00ECA482 /* NetworkClient */ = {
+			isa = PBXGroup;
+			children = (
+				9171064F2C15FD8B00ECA482 /* AsyncNetworkClient.swift */,
+			);
+			path = NetworkClient;
+			sourceTree = "<group>";
+		};
+		9171064C2C15FD0800ECA482 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9171064D2C15FD2100ECA482 /* UploaderService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		91F4D7902C0F4FAD004B2DBA = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				91F4D7B62C0F5139004B2DBA /* Uploader */,
+				9171064C2C15FD0800ECA482 /* Services */,
+				9171064B2C15FCEB00ECA482 /* NetworkClient */,
 				91F4D79C2C0F4FAD004B2DBA /* AppDelegate.swift */,
 				91F4D79E2C0F4FAD004B2DBA /* SceneDelegate.swift */,
 				91F4D7A52C0F4FAE004B2DBA /* Assets.xcassets */,
@@ -114,7 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				91F4D7BA2C0F51EA004B2DBA /* UploaderTableViewDataSource.swift */,
-				91F4D7BC2C0F5271004B2DBA /* UploadTableViewDelegate.swift */,
+				91DA32852C198C9C00A7479C /* UploaderTableViewCell.swift */,
 			);
 			path = UploaderTableView;
 			sourceTree = "<group>";
@@ -191,12 +213,14 @@
 			files = (
 				91F4D7B82C0F51B5004B2DBA /* UploaderView.swift in Sources */,
 				917106472C15FB0200ECA482 /* UploaderPresenter.swift in Sources */,
+				917106502C15FD8B00ECA482 /* AsyncNetworkClient.swift in Sources */,
 				91F4D7A12C0F4FAD004B2DBA /* UploaderViewController.swift in Sources */,
 				9171064A2C15FB1800ECA482 /* UploaderModel.swift in Sources */,
 				91F4D79D2C0F4FAD004B2DBA /* AppDelegate.swift in Sources */,
-				91F4D7BD2C0F5271004B2DBA /* UploadTableViewDelegate.swift in Sources */,
+				91DA32862C198C9C00A7479C /* UploaderTableViewCell.swift in Sources */,
 				91F4D79F2C0F4FAD004B2DBA /* SceneDelegate.swift in Sources */,
 				91F4D7BB2C0F51EA004B2DBA /* UploaderTableViewDataSource.swift in Sources */,
+				9171064E2C15FD2100ECA482 /* UploaderService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

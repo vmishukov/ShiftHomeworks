@@ -15,9 +15,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let scene = (scene as? UIWindowScene) else { return }
         
-        let model = UploaderModel()
+        let networkClient = AsyncNetworkClient()
+        let service = UploaderService(asyncNetwork: networkClient)
+        let model = UploaderModel(service: service)
         let presenter = UploaderPresenter(model: model)
         let viewController = UploaderViewController(presenter: presenter)
+        
         let navigationController = UINavigationController()
         navigationController.viewControllers = [ viewController ]
         

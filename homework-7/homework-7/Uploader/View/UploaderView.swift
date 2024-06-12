@@ -43,12 +43,12 @@ final class UploaderView: UIView {
     
     lazy var uoloaderTableView: UITableView = {
         let tableView = UITableView(frame: .zero)
+        tableView.register(UploaderTableViewCell.self, forCellReuseIdentifier: UploaderTableViewCell.identifier)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
     
-    let uploaderTableViewDataSource = UploaderTableViewDataSource()
-    let uploaderTableViewDelegate = UploadTableViewDelegate()
+    let uploaderTableViewDataSourceDelegate = UploaderTableViewDataSourceDelegate()
     
     init() {
         super.init(frame: .zero)
@@ -72,8 +72,8 @@ private extension UploaderView {
         uploaderStackView.addArrangedSubview(uploaderButton)
         
         addSubview(uoloaderTableView)
-        uoloaderTableView.delegate = uploaderTableViewDelegate
-        uoloaderTableView.dataSource = uploaderTableViewDataSource
+        uoloaderTableView.delegate = uploaderTableViewDataSourceDelegate
+        uoloaderTableView.dataSource = uploaderTableViewDataSourceDelegate
     }
     
     func setupConstraints() {

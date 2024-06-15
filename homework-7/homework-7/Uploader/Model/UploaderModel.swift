@@ -12,12 +12,12 @@ final class UploaderModel {
     
     private let service: UploaderServiceProtocol
     
-    init(service: UploaderServiceProtocol) {
-        self.service = service
+    enum ModelErrors: Error {
+        case notAnImageData
     }
     
-    enum modelErrors: Error {
-        case notAnImageData
+    init(service: UploaderServiceProtocol) {
+        self.service = service
     }
     
     func loadImage(with urlString: String) async throws -> UIImage? {
@@ -26,7 +26,7 @@ final class UploaderModel {
             guard
                 let imageData = try await service.loadImage(with: urlString),
                 let image = UIImage(data: imageData)
-            else { throw modelErrors.notAnImageData }
+            else { throw ModelErrors.notAnImageData }
             return image
         } catch let error{
             throw error

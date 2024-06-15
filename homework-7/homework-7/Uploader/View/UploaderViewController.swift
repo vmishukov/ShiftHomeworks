@@ -34,7 +34,6 @@ class UploaderViewController: UIViewController {
         super.viewDidLoad()
         presenter.viewDidLoad(view: self)
         setUpUI()
-        // Do any additional setup after loading the view.
     }
 }
 

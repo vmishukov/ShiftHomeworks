@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22757" systemVersion="23E224" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Company" representedClassName="Company" syncable="YES" codeGenerationType="class">
+        <attribute name="name" attributeType="String"/>
+        <attribute name="uid" attributeType="UUID" usesScalarValueType="NO"/>
+        <relationship name="workPlace" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Employee" inverseName="employees" inverseEntity="Employee"/>
+    </entity>
+    <entity name="Employee" representedClassName="Employee" syncable="YES" codeGenerationType="class">
+        <attribute name="age" optional="YES" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="position" attributeType="String"/>
+        <attribute name="uid" attributeType="UUID" usesScalarValueType="NO"/>
+        <relationship name="employees" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Company" inverseName="workPlace" inverseEntity="Company"/>
+    </entity>
+</model>

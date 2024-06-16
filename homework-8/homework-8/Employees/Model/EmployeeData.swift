@@ -12,16 +12,4 @@ struct EmployeeData {
     let name: String
     let position: String
     let age: Int?
-//    let company: CompanyModel
-    
-    
-}
-
-extension EmployeeData {
-    init(name: String, position: String, age: Int? = nil) {
-        self.id = UUID()
-        self.name = name
-        self.position = position
-        self.age = age
-    }
 }

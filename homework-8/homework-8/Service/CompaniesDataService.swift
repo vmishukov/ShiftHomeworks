@@ -58,7 +58,7 @@ final class CompaniesDataService: CompaniesDataServiceProtocol {
                     uuid: company.uid ?? UUID(),
                     name: company.name ?? "errorName",
                     employees: company.employees.array(of: Employee.self).map { employee in
-                            .init(name: employee.name ?? "errorName"
+                            .init(id: employee.uid ?? UUID(), name: employee.name ?? "errorName"
                                   ,position: employee.position ?? "errorPosition"
                                   ,age: employee.age as? Int
                             )

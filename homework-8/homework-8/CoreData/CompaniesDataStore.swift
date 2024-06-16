@@ -114,17 +114,9 @@ extension CompaniesDataStore: NSFetchedResultsControllerDelegate {
             if let indexPath = indexPath {
                 delegate?.companiesDataStoreDeleteCompany(self, at: indexPath)
             }
-            print("kek")
             break
             
-        case .move:
-            break
-            
-        case .update:
-            print("upd")
-            break
-            
-        @unknown default:
+        default:
             break
         }
     }

@@ -16,8 +16,9 @@ final class CompaniesRouter {
     }
     
     func goToEmployees(with id: UUID) {
-        /*
-        let dataService = EmployeesDataService()
+        
+        let dataStore = EmployeesDataStore()
+        let dataService = EmployeesDataService(dataStore: dataStore)
         
         let dependencies = EmployeesAssembly.Dependencies (
             navigationController: navigationController,
@@ -28,6 +29,6 @@ final class CompaniesRouter {
         
         let viewController = EmployeesAssembly.makeModule(with: dependencies, parameters: parameters)
         navigationController.pushViewController(viewController, animated: true)
-         */
+         
     }
 }

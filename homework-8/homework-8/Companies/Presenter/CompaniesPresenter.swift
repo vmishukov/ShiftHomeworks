@@ -62,7 +62,6 @@ private extension CompaniesPresenter {
     
     func fetchData() {
         companies = dataService.fetchCompanies() ?? []
-        print(companies)
     }
 }
 

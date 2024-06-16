@@ -8,6 +8,7 @@
 import UIKit
 
 protocol ComapniesViewProtocol: AnyObject {
+    
     func deleteRow(at index: Int)
     func insertRow(at index: Int)
     func showAddCompanyAlert()
@@ -69,10 +70,8 @@ extension CompaniesViewController: ComapniesViewProtocol {
             else { return }
             presenter.alertAddButtonDidTapped(with: text)
         }
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { [unowned alertController, weak self] _ in
-            guard let self else { return }
-            alertController.dismiss(animated: true)
-        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        
         alertController.addAction(cancelAction)
         alertController.addAction(addAction)
 
@@ -95,7 +94,6 @@ extension CompaniesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         presenter.didSelectCompany(at: indexPath.row)
     }
-    
 }
 
 extension CompaniesViewController: UITableViewDataSource {

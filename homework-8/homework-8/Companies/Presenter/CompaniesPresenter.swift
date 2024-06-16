@@ -7,20 +7,26 @@
 
 import Foundation
 
+protocol CompaniesPresenterDelegate: AnyObject {
+  
+}
+
 final class CompaniesPresenter {
     
     private weak var view: ComapniesViewProtocol?
-    private let dataService: CompaniesDataService
+    private var dataService: CompaniesDataServiceProtocol
     private let router: CompaniesRouter
     private var companies: [CompanyData] = []
     
-    init(with dataService: CompaniesDataService, router: CompaniesRouter) {
+    init(with dataService: CompaniesDataServiceProtocol, router: CompaniesRouter) {
         self.dataService = dataService
         self.router = router
+        self.dataService.delegate = self
     }
     
     func didLoad(ui: ComapniesViewProtocol) {
         self.view = ui
+       
         fetchData()
     }
     
@@ -29,7 +35,7 @@ final class CompaniesPresenter {
     }
     
     func alertAddButtonDidTapped(with companyName: String) {
-        let newCompany = CompanyData(name: companyName)
+        let newCompany = CompanyData(uuid: UUID(), name: companyName)
         dataService.addNewCompany(newCompany)
     }
     
@@ -39,8 +45,8 @@ final class CompaniesPresenter {
     
     func deleteTaped(at index: Int) {
         guard index < companies.count else { return }
-        //        let deletedCompany = model.remove(at: index)
-        //        ui?.deleteRow(at: index)
+        let companyUuid = companies[index].id
+        dataService.deleteCompany(companyUuid)
     }
     
     func getNumberOfRows() -> Int {
@@ -58,4 +64,18 @@ private extension CompaniesPresenter {
         companies = dataService.fetchCompanies() ?? []
         print(companies)
     }
+}
+
+extension CompaniesPresenter: CompaniesDataServiceDelegate {
+    
+    func companiesDataService(_: any CompaniesDataServiceProtocol, insert company: CompanyData, at indexPath: IndexPath) {
+        companies.insert(company, at: indexPath.row)
+        view?.insertRow(at: indexPath.row)
+    }
+    
+    func companiesDataServiceDeleteCompany(_: any CompaniesDataServiceProtocol, at indexPath: IndexPath) {
+        companies.remove(at: indexPath.row)
+        view?.deleteRow(at: indexPath.row)
+    }
+
 }

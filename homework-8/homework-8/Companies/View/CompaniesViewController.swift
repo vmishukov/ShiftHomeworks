@@ -80,18 +80,13 @@ extension CompaniesViewController: ComapniesViewProtocol {
     }
     
     func insertRow(at index: Int) {
-        /*
         contentView.tableView.insertRows(at: [.init(row: index, section: 0)], with: .automatic)
-         */
     }
     
     func deleteRow(at index: Int) {
-        /*
+        
         let indexPath = IndexPath(row: index, section: 0)
-        contentView.tableView.beginUpdates()
         contentView.tableView.deleteRows(at: [indexPath], with: .automatic)
-        contentView.tableView.endUpdates()
-         */
     }
 }
 

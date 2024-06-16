@@ -16,8 +16,8 @@ struct CompanyData {
 
 extension CompanyData {
     
-    init(name: String, employees: [EmployeeData]? = nil) {
-        self.id = UUID()
+    init(uuid: UUID, name: String, employees: [EmployeeData]? = nil) {
+        self.id = uuid
         self.name = name
         self.employees = employees
     }

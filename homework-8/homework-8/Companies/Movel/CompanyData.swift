@@ -7,16 +7,16 @@
 
 import Foundation
 
-struct CompanyModel {
+struct CompanyData {
     let id: UUID
     let name: String
-    let employees: [EmployeeModel]
+    let employees: [EmployeeData]?
     
 }
 
-extension CompanyModel {
+extension CompanyData {
     
-    init(name: String, employees: [EmployeeModel]) {
+    init(name: String, employees: [EmployeeData]? = nil) {
         self.id = UUID()
         self.name = name
         self.employees = employees

@@ -10,6 +10,7 @@ import UIKit
 protocol ComapniesViewProtocol: AnyObject {
     func deleteRow(at index: Int)
     func insertRow(at index: Int)
+    func showAddCompanyAlert()
 }
 
 class CompaniesViewController: UIViewController {
@@ -48,6 +49,7 @@ private extension CompaniesViewController {
             self.presenter.addButtonTapped()
         }
         contentView.tableView.delegate = self
+        contentView.tableView.dataSource = self
     }
     
     func setupNavigationBar() {
@@ -56,6 +58,27 @@ private extension CompaniesViewController {
 }
 
 extension CompaniesViewController: ComapniesViewProtocol {
+    
+    func showAddCompanyAlert() {
+        let alertController = UIAlertController(title: "Add Company", message: nil, preferredStyle: .alert)
+        alertController.addTextField()
+        
+        let addAction = UIAlertAction(title: "Ok", style: .default) { [unowned alertController, weak self] _ in
+            guard let text = alertController.textFields?.first?.text,
+                  let self = self
+            else { return }
+            presenter.alertAddButtonDidTapped(with: text)
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { [unowned alertController, weak self] _ in
+            guard let self else { return }
+            alertController.dismiss(animated: true)
+        }
+        alertController.addAction(cancelAction)
+        alertController.addAction(addAction)
+
+        present(alertController, animated: true)
+    }
+    
     func insertRow(at index: Int) {
         /*
         contentView.tableView.insertRows(at: [.init(row: index, section: 0)], with: .automatic)
@@ -78,4 +101,30 @@ extension CompaniesViewController: UITableViewDelegate {
         presenter.didSelectCompany(at: indexPath.row)
     }
     
+}
+
+extension CompaniesViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return presenter.getNumberOfRows()
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: CompaniesTableViewCell.identifier, for: indexPath) as? CompaniesTableViewCell {
+            let company = presenter.getCellForRowAt(indexPath: indexPath)
+            cell.setupContent(with: company)
+            
+            return cell
+            
+        } else {
+            return UITableViewCell()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            presenter.deleteTaped(at: indexPath.row)
+        }
+    }
 }

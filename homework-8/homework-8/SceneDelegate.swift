@@ -17,7 +17,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let navigationController = UINavigationController()
         
         let router = CompaniesRouter(navigationController: navigationController)
-        let dataService = CompaniesDataService()
+        let dataStore = CompaniesDataStore()
+        let dataService = CompaniesDataService(dataStore: dataStore)
         let presenter = CompaniesPresenter(with: dataService, router: router)
         let viewController = CompaniesViewController(presenter: presenter)
         navigationController.viewControllers = [viewController]

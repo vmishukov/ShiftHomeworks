@@ -5,16 +5,14 @@
 //  Created by Анна Вертикова on 06.06.2024.
 //
 
-import CoreData
-
+import Foundation
 
 final class CompaniesPresenter {
     
-    private weak var ui: ComapniesViewProtocol?
+    private weak var view: ComapniesViewProtocol?
     private let dataService: CompaniesDataService
     private let router: CompaniesRouter
-    private var model: [CompanyModel] = []
-    
+    private var companies: [CompanyData] = []
     
     init(with dataService: CompaniesDataService, router: CompaniesRouter) {
         self.dataService = dataService
@@ -22,49 +20,42 @@ final class CompaniesPresenter {
     }
     
     func didLoad(ui: ComapniesViewProtocol) {
-        self.ui = ui
-        
-    }
-    
-    func fetchData() {
-        
+        self.view = ui
+        fetchData()
     }
     
     func addButtonTapped() {
-        /*
-         let alertController = UIAlertController(title: "Add Company", message: nil, preferredStyle: .alert)
-         alertController.addTextField()
-         
-         let action = UIAlertAction(title: "Ok", style: .default) { [unowned alertController, weak self] _ in
-         guard let text = alertController.textFields?.first?.text,
-         let self = self
-         else { return }
-         
-         //  self.dataService.add(company: .init(name: text, employees: []))
-         }
-         
-         alertController.addAction(action)
-         ui.present(alertController, animated: true)
-         */
+        view?.showAddCompanyAlert()
+    }
+    
+    func alertAddButtonDidTapped(with companyName: String) {
+        let newCompany = CompanyData(name: companyName)
+        dataService.addNewCompany(newCompany)
     }
     
     func didSelectCompany(at index: Int) {
-        router.goToEmployees(with: model[index].id)
+        router.goToEmployees(with: companies[index].id)
     }
     
     func deleteTaped(at index: Int) {
-        guard index < model.count else { return }
+        guard index < companies.count else { return }
         //        let deletedCompany = model.remove(at: index)
         //        ui?.deleteRow(at: index)
     }
-}
-
-extension CompaniesPresenter {
+    
     func getNumberOfRows() -> Int {
-        return model.count
+        return companies.count
     }
     
-    func getCellForRowAt(indexPath: IndexPath) -> CompanyModel {
-        return model[indexPath.row]
+    func getCellForRowAt(indexPath: IndexPath) -> CompanyData {
+        return companies[indexPath.row]
+    }
+}
+
+private extension CompaniesPresenter {
+    
+    func fetchData() {
+        companies = dataService.fetchCompanies() ?? []
+        print(companies)
     }
 }

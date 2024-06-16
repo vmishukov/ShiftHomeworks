@@ -50,9 +50,9 @@ class CompaniesTableViewCell: UITableViewCell {
 }
 
 extension CompaniesTableViewCell {
-    func setupContent(with company: CompanyModel) {
+    func setupContent(with company: CompanyData) {
         companyNameLabel.text = company.name
-        employeesCountLabel.text = String(company.employees.count)
+        employeesCountLabel.text = String(company.employees?.count ?? 0)
     }
     
     func setupLayout() {

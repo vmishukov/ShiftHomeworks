@@ -27,7 +27,6 @@ class CompaniesView: UIView {
         return view
     }()
     
-    let companiesTableViewDataSource = CompaniesTableViewDataSource()
     
     init() {
         super.init(frame: .zero)
@@ -41,7 +40,6 @@ class CompaniesView: UIView {
     
     func setupView() {
         backgroundColor = .systemBackground
-        tableView.dataSource = companiesTableViewDataSource
         addSubview(tableView)
         
         NSLayoutConstraint.activate([

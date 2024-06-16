@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct EmployeeModel {
+struct EmployeeData {
     let id: UUID
     let name: String
     let position: String
@@ -17,8 +17,8 @@ struct EmployeeModel {
     
 }
 
-extension EmployeeModel {
-    init(name: String, position: String, age: Int?) {
+extension EmployeeData {
+    init(name: String, position: String, age: Int? = nil) {
         self.id = UUID()
         self.name = name
         self.position = position
